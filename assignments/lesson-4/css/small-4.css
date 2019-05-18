@@ -1,0 +1,65 @@
+
+* {
+margin: 0;
+padding: 0;
+}
+body {
+font-size: 16px;
+background-color: #cedec5;
+}
+header {
+/* margin: 10px auto; */
+background-color: #191919;
+/* border: 1px solid #cedec5; */
+text-align: center;
+}
+.sitename {
+font-family: 'Chewy', cursive;
+color:#e87500;
+}
+#dry {
+color:#ff3838;
+}
+.motto {
+color: whitesmoke;
+font-family: 'Amaranth', sans-serif;
+}
+.logo, .headings {
+display: inline-block;
+vertical-align: middle;
+margin: 10px;
+}
+nav {
+background-color: #ff3838 ;
+text-align: center; 
+}
+nav ul {
+list-style-type: none;
+}
+nav ul li a {
+padding: .25rem;
+display: block;
+text-decoration: none;
+font-family: 'Lobster Two', cursive;
+font-weight: bold;
+font-size: 18px;
+color: whitesmoke;  /* I've changed the color from green to white..No more bleading eyes...  */
+}
+nav ul li a:hover {
+    color:#191919;
+}
+.active {
+background-color: white;
+color: #e87500;
+}
+h1, h2, h3, h4, h5 {
+font-family: 'Permanent Marker', cursive;
+color: #ff3838;
+}
+p {
+font-family: 'Amaranth', sans-serif;
+}
+footer {
+background-color: #191919;
+color: whitesmoke;
+}
