@@ -24,6 +24,9 @@ color:#ff3838;
 color: whitesmoke;
 font-family: 'Amaranth', sans-serif;
 }
+.logo {
+    width: 80px;
+}
 .logo, .headings {
 display: inline-block;
 vertical-align: middle;
