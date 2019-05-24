@@ -28,8 +28,7 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#">&#9776; Menu</a></li>
-            <li><a href="#">Home</a></li>
+            <li><a href="#" onclick="toggleMenu()" &#9776; Menu</a> </li> <li><a href="#">Home</a></li>
             <li><a href="#" class="active">Preston</a></li>
             <li><a href="#">Soda Springs</a></li>
             <li><a href="#">Fish Haven</a></li>
@@ -39,9 +38,16 @@
     </nav>
     <main>
         <h2>Preston, Idaho</h2>
-        <div>
+        <div class="herodiv">
             <img src="/assignments/lesson-5/images/prestonmainpic.jpeg" alt="Preston town picture">
-            <div>Weather Summary</div>
+            <section class="stats">
+                <h3 id="statsheading"> Weather Stats</h3>
+                <p>Currently : <span id="value1">Value</span> </p>
+                <p>High : <span id="value2">Value</span> </p>
+                <p>Wind Chill: <span id="value3">Value</span> </p>
+                <p>Wind Speed : <span id="value4">Value</span> </p>
+                <p>Humidity : <span id="value5">Value</span> </p>
+            </section>
         </div>
         <article class="main-article">
 
@@ -68,7 +74,7 @@
             </picture>
         </article>
     </main>
-    <section>
+    <section class="contactsection">
         <div class="contacts">
             <h3 class="sitename"><span class="dry">Dry</span>Umbrella</h3>
             &xodot; 30 N 1st E <br>
