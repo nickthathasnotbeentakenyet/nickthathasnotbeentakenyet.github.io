@@ -59,7 +59,7 @@ nav ul li a {
   text-decoration: none;
   font-family: 'Lobster Two', cursive;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   color: whitesmoke;
 }
 
@@ -112,7 +112,7 @@ a img {
 
 #statsheading {
   text-decoration-line: underline;
-  color: white;
+  color: orangered;
   padding-bottom: 1em;
 }
 
@@ -122,16 +122,16 @@ a img {
   left: 50px;
   padding: 1.5rem;
   border: 1px solid whitesmoke;
-  background: #191919;
+  background: lightskyblue;
   box-shadow: 0 0 30px white;
-  opacity: 0.8;
-  color: white;
+  opacity: 0.7;
+  color: black;
   font-size: 1.2em;
 }
 
 /* ---------------------------------------------------------------------------------------------- */
 article {
-  background-color: rgb(157, 240, 140);
+  background-color: rgb(168, 240, 154);
   padding: 20px;
 }
 
