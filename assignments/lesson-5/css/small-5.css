@@ -131,7 +131,7 @@ a img {
 
 /* ---------------------------------------------------------------------------------------------- */
 article {
-  background-color: rgb(168, 240, 154);
+  background-color: rgb(180, 241, 168);
   padding: 20px;
 }
 
@@ -159,6 +159,7 @@ article {
   width: 30px;
   height: 30px;
   animation: radial-pulse 1s infinite;
+  margin: 0.5em;
 }
 
 @keyframes radial-pulse {
