@@ -118,8 +118,8 @@ a img {
 
 .stats {
   position: absolute;
-  top: 50px;
-  left: 50px;
+  top: 30px;
+  left: 30px;
   padding: 1.5rem;
   border: 1px solid whitesmoke;
   background: lightskyblue;
