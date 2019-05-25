@@ -128,7 +128,10 @@ a img {
   color: black;
   font-size: 1.2em;
 }
-
+.wstats {
+  color: red;
+  text-align: center;
+}
 .forecast5 {
   display: none;
 }

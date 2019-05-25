@@ -58,11 +58,6 @@
 
     /* ---------------------------------------FORECAST-------------------------------------------- */
 
-    .wstats {
-        color: red;
-        text-align: center;
-    }
-
     .forecast5 {
         display: inline;
     }
