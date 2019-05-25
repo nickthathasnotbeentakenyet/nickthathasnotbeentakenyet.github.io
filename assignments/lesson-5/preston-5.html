@@ -16,6 +16,7 @@
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8X8H-hu-yOjP69iIibBt7XOltgbPkXnc"></script>
 </head>
+<!-- *********************************HEADER PART****************************** -->
 
 <body>
     <header>
@@ -28,7 +29,7 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a> </li> 
+            <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a> </li>
             <li><a href="#">Home</a></li>
             <li><a href="#" class="active">Preston</a></li>
             <li><a href="#">Soda Springs</a></li>
@@ -37,25 +38,60 @@
             <li><a href="#">Gallery</a></li>
         </ul>
     </nav>
+<!-- *********************************HERO && WEATHER STATS************************************ -->
     <main>
         <h2>Preston, Idaho</h2>
         <div class="herodiv">
             <img src="/assignments/lesson-5/images/prestonmainpic.jpeg" alt="Preston town picture">
             <section class="stats">
                 <h3 id="statsheading"> Weather Stats</h3>
-                <p>Currently : <span id="value1">Value</span> </p>
-                <p>High : <span id="value2">Value</span> </p>
-                <p>Wind Chill: <span id="value3">Value</span> </p>
-                <p>Wind Speed : <span id="value4">Value</span> </p>
-                <p>Humidity : <span id="value5">Value</span> </p>
+                <p>Currently : <span id="value1" class="wstats">Cloudy</span> </p>
+                <p>High : <span id="value2" class="wstats">25&#8451;</span> </p>
+                <p>Wind Chill: <span id="value3" class="wstats">28&#8451;</span> </p>
+                <p>Wind Speed : <span id="value4" class="wstats">5m/s</span> </p>
+                <p>Humidity : <span id="value5" class="wstats">78&percnt;</span> </p>
             </section>
         </div>
+        <!-- ******************************5 DAY FORECAST************************************** -->
+        <section class="forecast5">
+            <h2>5 Day Forecast</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="/assignments/lesson-5/images/cloudy.png" alt="cloud"><br> Cloudy
+                        </td>
+                        <td>
+                            <img src="/assignments/lesson-5/images/rain.png" alt="rain"><br> Rain </td>
+                        <td>
+                            <img src="/assignments/lesson-5/images/sun.png" alt="sun"><br> Sunny </td>
+                        <td>
+                            <img src="/assignments/lesson-5/images/sun.png" alt="sun"><br> Sunny </td>
+                        <td>
+                            <img src="/assignments/lesson-5/images/sun.png" alt="sun"><br> Sunny </td>
+                        <td>
+                            <img src="/assignments/lesson-5/images/lightning.png" alt="lightning"><br> Ligtning
+                        </td>
+                    </tr>
+            </table>
+        </section>
+        <!-- ************************************MAIN ARTICLE******************************************** -->
         <article class="main-article">
 
             <h3> Barbecue Time </h3>
-            <p class="author">By Professor Wiki Pedia</p>
-
-            <p>
+            <p class="author">By Professor W. Ikipedia</p>
+            <p><img class="floating" src="/assignments/lesson-5/images/barbacue.jpeg" alt="barbacue picture">
                 Barbecue or barbeque (informally BBQ or the Australian term barbie) is a cooking method, a style of
                 food, and a name for a meal or gathering at which this style of food is cooked and served.
 
@@ -70,14 +106,16 @@
                 about an hour. Braising combines direct, dry heat charbroiling on a ribbed surface with a broth-filled
                 pot for moist heat. Grilling is done over direct, dry heat, usually over a hot fire for a few minutes.
             </p>
-            <picture>
-                <img src="/assignments/lesson-5/images/barbacue.jpeg" alt="barbacue picture">
-            </picture>
+
         </article>
     </main>
+    <!-- *****************************************CONTACT INFO ***************************************** -->
     <section class="contactsection">
         <div class="contacts">
+            <img class="mapimage" src="/assignments/lesson-5/images/map.png" alt="preston map">
             <h3 class="sitename"><span class="dry">Dry</span>Umbrella</h3>
+
+
             &xodot; 30 N 1st E <br>
             Preston, ID 83263 <br>
             &phone; 999 999 999 <br>
@@ -89,23 +127,26 @@
                     src="/assignments/lesson-5/images/facebook.png" alt="Facebook" width="30"></a>
             <a class="social" href="http://plus.google.com" target="_blank"><img
                     src="/assignments/lesson-5/images/google.png" alt="Google+" width="30"></a>
+
+
+            <!-- ******************************MAP****************************************** -->
+            <div id="map" class="map">
+                <script>
+                    function initMap() {
+                        var centerLatLng = new google.maps.LatLng(42.0905677, -111.8866767, 14);
+                        var mapOptions = {
+                            center: centerLatLng,
+                            zoom: 8
+                        };
+                        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                    }
+                    google.maps.event.addDomListener(window, "load", initMap);
+                </script>
+            </div>
         </div>
-        <!-----------------------------------MAP ------------------------------>
-        <div id="map" class="map">
-            <script>
-                function initMap() {
-                    var centerLatLng = new google.maps.LatLng(42.0905677, -111.8866767, 14);
-                    var mapOptions = {
-                        center: centerLatLng,
-                        zoom: 8
-                    };
-                    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-                }
-                google.maps.event.addDomListener(window, "load", initMap);
-            </script>
-        </div>
-        <!---------------------------------------------------------------------------------->
+
     </section>
+    <!-- **************************************FOOTER******************************************** -->
     <footer>
         <p>&copy; 2019 Designed by Arkadii Lantukh | DryUmbrella</p>
     </footer>
