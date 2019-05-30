@@ -1,0 +1,283 @@
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+* {
+    margin: auto;
+    box-sizing: border-box;
+}
+
+h1 {
+    background-color: #333333;
+    color: whitesmoke;
+    padding: 1em 0 0.5em 0;
+    text-align: center;
+    font-weight: bolder;
+}
+
+ul {
+    background-color: #333333;
+}
+
+ul li {
+    margin: 7px;
+    display: inline-block;
+    font-family: orbitron;
+}
+
+footer {
+    background-color: #333333;
+    color: whitesmoke;
+    margin: auto;
+}
+
+.paragraph {
+    background-color: burlywood;
+    padding: 1em 0 1em 0;
+}
+
+.multy {
+    background-color: #333333;
+    padding: 1em 0 1em 0;
+    color: whitesmoke;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+.snow {
+    width: 100%;
+    height: 38%;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    z-index: 0;
+}
+
+#snow {
+    width: 100%;
+    height: 90%;
+    background-image: url("https://yraaa.ru/_pu/27/15825154.png"), url("https://yraaa.ru/_pu/27/89961317.png"), url("https://yraaa.ru/_pu/27/21791255.png");
+    -webkit-animation: snow 20s linear infinite;
+    -moz-animation: snow 20s linear infinite;
+    -ms-animation: snow 20s linear infinite;
+    animation: snow 20s linear infinite;
+}
+
+@keyframes snow {
+    0% {
+        background-position: 0px 0px, 0px 0px, 0px 0px;
+    }
+
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}
+
+@-moz-keyframes snow380% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+}
+
+100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+}
+}
+
+@-webkit-keyframes snow {
+    0% {
+        background-position: 0px 0px, 0px 0px, 0px 0px;
+    }
+
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}
+
+@-ms-keyframes snow {
+    0% {
+        background-position: 0px 0px, 0px 0px, 0px 0px;
+    }
+
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------LINKS-----------------------------------------*/
+
+/* unvisited link */
+a:link {
+    color: forestgreen;
+}
+
+/* visited link */
+a:visited {
+    color: whitesmoke;
+}
+
+/* different language*/
+a:lang(ru) {
+    color: crimson;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: gold;
+}
+
+/* selected link */
+a:active {
+    color: black;
+    font-size: xx-large;
+}
+
+
+/***************ORDER IS IMPORTANT**************/
+
+
+.upDown {
+    text-decoration: none;
+    padding: 2px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.upDown:hover {
+    background-color: white;
+    color: #4CAF50;
+    box-shadow: 5px 5px 5px #4CAF50;
+}
+
+/*--------------------------------------------IMAGES-----------------------------------------*/
+
+img {
+    margin: 3%;
+    width: 300px;
+    /* border: 5px solid #333333; */
+}
+
+img:hover {
+    box-shadow: 10px 10px 10px #333333;
+    transition: transform .5s ease;
+    transform: scale(1.5);
+}
+
+img:hover:active {
+    transform: rotatex(180deg);
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+
+/*---------------------------------------PARAGRAPHS & DIVS ---------------------------------------*/
+
+p:first-child {
+    font-weight: bold;
+    font-size: 2em;
+    color: cadetblue;
+}
+
+.hidden {
+    display: none;
+}
+
+/* div:hover .hidden {
+    display: flex;
+    background-color: yellow;
+    padding: 10px;
+} */
+
+
+/* *************************************  TOOLTIP  ******************************************** */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position of the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 90%;
+    margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/*---------------------------------------------INPUT-----------------------------------------*/
+
+input:focus {
+    background-color: skyblue;
+    color: brown;
+    font-size: 30px;
+}
+
+/*--------------------------------------------BUTTONS----------------------------------------*/
+
+button {
+    display: inline-block;
+    margin-left: 40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: firebrick;
+    color: whitesmoke;
+    font-size: large;
+    font-weight: bold;
+
+}
+
+button:hover {
+    animation: radial-pulse 1s infinite;
+}
+
+@keyframes radial-pulse {
+    0% {
+        box-shadow: 0 0 0 0px white;
+    }
+
+    100% {
+        box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+    }
+}
+
+/*-------------------------------------------PSEUDO-ELEMENTS------------------------------------*/
+#star::before {
+    content: "\272a";
+    font-size: 30px;
+}
+
+#star::after {
+    content: "\272a";
+    font-size: 30px
+}
+
+.elements::first-line {
+    font-variant: small-caps;
+    font-family: monospace;
+    color: darkorange;
+}
+
+.elements::first-letter {
+    color: darkred;
+    font-size: 46px;
+}
+
+::selection {
+    background: lightseagreen;
+    color: gold;
+}

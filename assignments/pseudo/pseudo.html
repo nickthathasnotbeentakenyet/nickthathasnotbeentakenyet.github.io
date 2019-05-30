@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo</title>
+    <link rel="stylesheet" href="css/pseudo.css">
+    <script>
+        function myFunction() {
+            var number = parseFloat(document.getElementById("input").value);
+            var multiply = number * 2;
+            document.getElementById("out").innerHTML = multiply;
+        }
+    </script>
+</head>
+
+<!-- ************************************* LINKS************************************** -->
+
+<body>
+    <header id="head">
+        <h1>Pseudo classes &amp; elements</h1>
+        <ul>
+            <li><a href=https://google.com>not visited</a> </li> <br>
+            <li><a href=https://pastebin.com>visited </a> </li> <br>
+            <li><a href=https://lds.org>hovered </a> </li> <br>
+            <li><a href=https://archlinux.org>active </a> </li> <br>
+            <li><a lang="ru" href=https://sololearn.com>привет </a> </li> </ul> <a class="upDown" href="#footer">&dArr;
+                    DOWN &dArr;</a>
+    </header>
+
+    <!-- ******************************** PICTURES ************************************  -->
+
+    <section>
+        <img src="pics/quazar.jpg" alt="a quazar">
+        <img src="pics/blackhole.jpg" alt="a black hole">
+        <img src="pics/sun.jpg" alt="the sun">
+    </section>
+
+    <!-- ************************************ PARAGRAPHS ********************************** -->
+
+    <section class="paragraph">
+        <p>This is the first paragraph</p>
+        <p>This is the second paragraph</p>
+        <p>This is the third paragraph</p>
+        <p>This is the fourth paragraph</p>
+        <br>
+        <br>
+        <div>This div has a secret room with a ....<p class="hidden">Who you were looking for?<img src="pics/ninja.png"
+                    alt="ninja picture" style=" width: 200px; height: 200px">You were not supposed to see me!</p>
+        </div>
+        <br>
+        <div class="tooltip">This is an example of using tooltips with pseudo-class
+            <span class="tooltiptext">Hello there! </span>
+        </div>
+    </section>
+
+    <!-- ************************************* MULTIPLICATION ******************************* -->
+
+    <section class="multy">
+        <input type="text" id="input" size="10">
+        <button type="button" onclick="myFunction()">Multiply</button>
+        <div id="out">Wanna some multiplication?</div>
+    </section>
+
+    <div class="snow">
+        <div id="snow"></div>
+    </div>
+
+    <!-- ************************************** PSEUDO-ELEMENTS ******************************* -->
+
+    <section class="paragraph elements">
+        <p>This is the first paragraph that demonstrates pseudo elements. Don't read this. Listen to what Arkadii says
+            right now. Stop it, stop it right here. Can't stop? I knew I wouldn't, so I'm gonna stop you here.. </p>
+        <p id="star">These stars are shining for you</p>
+    </section>
+
+    <footer id="footer"> <a class="upDown" href="#head">&uArr; UP &uArr;</a> | 2019 &copy; | Arkadii Lantukh |
+        Saint-Petersburg, Russia</footer>
+
+</body>
+
+</html>
