@@ -12,9 +12,9 @@ body {
 header {
   background-color: #191919;
   display: flex;
-  flex-flow: row ;
+  flex-flow: row;
   justify-content: center;
-  }
+}
 
 .sitename {
   font-family: 'Chewy', cursive;
@@ -49,7 +49,7 @@ header {
   text-align: center;
   background-color: #ff3838;
   display: flex;
-	flex-direction: column;
+  flex-direction: column;
 }
 
 .navigation li:first-child {
@@ -220,3 +220,23 @@ footer {
 footer p {
   text-align: center;
 }
+
+/* ---------------------------------------GALLERY---------------------------------------------- */
+
+.gallery {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  display: grid;
+  width: 100%;
+  height: 320vh;
+}
+
+.gallery p {
+  display: none;
+}
+
+.gallery img {
+  box-shadow: none;
+}
+
+/* ---------------------------------------------------------------------------------------------- */

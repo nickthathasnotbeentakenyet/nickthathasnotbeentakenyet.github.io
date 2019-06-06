@@ -105,29 +105,33 @@
     }
 
     /* ----------------------------------------- GALLERY --------------------------------------------- */
+    @media only screen and (min-width: 70.1em) {
+        .gallery {
+            margin-top: 2em;
+            margin-bottom: 1em;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 30.9%);
+            grid-gap: 10px;
+            width: 79%;
+            height: 105vh;
+            text-align: center;
+        }
 
-    .gallery {
-        margin-top: 2em;
-        margin-bottom: 1em;
-        display: grid;
-        grid-template-rows: repreat(3, 1fr);
-        grid-template-columns: repeat(3, 30.9%);
-        grid-gap: 10px;
-        width: 79%;
-        height: 90vh;
-        text-align: center;
-        font-family: 'lobster two';
+        .gallery p {
+            display: inline;
+            font-family: 'lobster two';
+        }
+
+        .gallery img:hover {
+            box-shadow: 5px 5px 20px #191919;
+        }
+
+        .gallery img:active {
+            transition: transform .5s ease;
+            transform: scale(1.7);
+        }
     }
-    .gallery img {
-        box-shadow: none;
-    }
-    .gallery img:hover {
-        box-shadow: 5px 5px 20px #191919;
-    }
-    .gallery img:active {
-        transition: transform .5s ease;
-        transform: scale(1.7);
-    }
+
     /* ------------------------------------CONTACTS AND MAP---------------------------------------------- */
     .contactsection {
         background-color: antiquewhite;
