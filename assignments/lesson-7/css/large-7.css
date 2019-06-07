@@ -130,6 +130,11 @@
             transition: transform .5s ease;
             transform: scale(1.7);
         }
+        #gallery {
+            width: 74.5%;
+            margin: 1.2em 12.5% 0 12.5%;
+    
+        }
     }
 
     /* ------------------------------------CONTACTS AND MAP---------------------------------------------- */

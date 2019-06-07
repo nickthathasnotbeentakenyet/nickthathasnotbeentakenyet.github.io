@@ -8,4 +8,9 @@
         margin-bottom: 1em;
         grid-gap: 1em;
     }
+    #gallery {
+        width: 75.5%;
+        margin: 1.2em 12.5% 0 12.5%;
+
+    }
 }

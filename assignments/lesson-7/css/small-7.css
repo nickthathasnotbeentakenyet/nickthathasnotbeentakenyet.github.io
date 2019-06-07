@@ -239,8 +239,8 @@ footer p {
   box-shadow: none;
 }
 #gallery{
-  width: 75%;
-  margin: 1.2em 12.5% 0 12.5%;
+  width: 100%;
+  margin: 1.2em 0;
   text-align: center;
   font-size: x-large;
   font-family: 'lobster two';
