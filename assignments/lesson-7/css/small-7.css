@@ -93,7 +93,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'lobster two', cursive;
   color: #ff3838;
 }
 
@@ -238,5 +238,15 @@ footer p {
 .gallery img {
   box-shadow: none;
 }
-
+#gallery{
+  width: 75%;
+  margin: 1.2em 12.5% 0 12.5%;
+  text-align: center;
+  font-size: x-large;
+  font-family: 'lobster two';
+  border: #191919 1px dashed;
+  background-color: #191919;
+  color: whitesmoke;
+  padding: 0.1em 0;
+}
 /* ---------------------------------------------------------------------------------------------- */
