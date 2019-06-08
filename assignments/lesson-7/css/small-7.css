@@ -128,7 +128,9 @@ a img {
 #statsheading {
   text-decoration-line: underline;
   color: orangered;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
+  text-shadow: 1px 2px white;
+  text-align: center;
 }
 
 .stats {
@@ -143,10 +145,21 @@ a img {
   color: black;
   font-size: 1.1em;
 }
+.stats p {
+  color: whitesmoke;
+  text-shadow: 1px 2px red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
 .wstats {
   color: red;
-  text-align: center;
+  text-align: left;
+  text-shadow: 1px 2px white;
+}
+.left {
+  text-align: right;
+  margin-right: 0.5em;
 }
 
 .forecast5 {
