@@ -1,0 +1,16 @@
+@media only screen and (min-width: 35em) and (max-width: 70em) {
+    .gallery {
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: repeat(2, 37%);
+        grid-gap: 10px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1em;
+        grid-gap: 1em;
+    }
+    #gallery {
+        width: 75.5%;
+        margin: 1.2em 12.5% 0 12.5%;
+
+    }
+}
