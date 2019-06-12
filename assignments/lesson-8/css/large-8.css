@@ -65,7 +65,14 @@
     .contactsection {
         margin: 0 12.5%;
     }
-
+    #statsheading {
+        padding-bottom: 0.5em;
+    }
+    .stats {
+        top: 30px;
+        left: 30px;
+        font-size: 1.2em;
+    }
     /* ---------------------------------------FORECAST-------------------------------------------- */
 
     .forecast5 {

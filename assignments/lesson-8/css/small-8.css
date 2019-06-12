@@ -63,7 +63,7 @@ header {
 .navigation a {
   display: block;
   color: #fff;
-  padding: .25rem;
+  padding: .7rem;
   text-align: center;
   text-decoration: none;
   color: whitesmoke;
@@ -128,22 +128,22 @@ a img {
 #statsheading {
   text-decoration-line: underline;
   color: orangered;
-  padding-bottom: 0.5em;
+  padding-bottom: 0.2em;
   text-shadow: 1px 2px white;
   text-align: center;
 }
 
 .stats {
   position: absolute;
-  top: 30px;
-  left: 30px;
+  top: 20px;
+  left: 20px;
   padding: 1.5rem;
   border: 1px solid whitesmoke;
   background: lightskyblue;
-  box-shadow: 0 0 30px white;
+  box-shadow: 10px 10px 30px whitesmoke;
   opacity: 0.7;
   color: black;
-  font-size: 1.1em;
+  font-size: 0.9em;
 }
 .stats p {
   color: whitesmoke;
