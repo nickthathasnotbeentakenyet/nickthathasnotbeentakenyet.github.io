@@ -1,4 +1,5 @@
 @media only screen and (min-width: 32.5em) {
+
     /* ----------------------------------------HEAD----------------------------------------- */
     .logo {
         width: 100px;
@@ -16,9 +17,11 @@
         display: block;
         flex: 1 1 auto;
     }
+
     .navigation li a {
         font-size: x-large;
     }
+
     .navigation a:hover {
         color: rgb(40, 160, 207);
         background-color: whitesmoke;
@@ -30,14 +33,16 @@
         background-color: lightskyblue;
         text-shadow: 2px 2px rgb(40, 160, 207);
     }
+
     /* -----------------------------------------------HERO------------------------------------------ */
     .main-article {
         margin-bottom: 2em;
     }
-    .main-article::after{
-        content:'';
+
+    .main-article::after {
+        content: '';
         display: block;
-        clear:both
+        clear: both
     }
 
     h2 {
@@ -55,7 +60,7 @@
         margin: 0;
     }
 
-    .floating{
+    .floating {
         width: 50%;
         height: auto;
         margin: 0 0.5em;
@@ -66,14 +71,17 @@
     .contactsection {
         margin: 0 12.5%;
     }
+
     #statsheading {
         padding-bottom: 0.5em;
     }
+
     .stats {
         top: 30px;
         left: 30px;
         font-size: 1.2em;
     }
+
     /* ---------------------------------------FORECAST-------------------------------------------- */
 
     .forecast5 {
@@ -113,8 +121,8 @@
         text-align: center;
     }
 
-     /* ------------------------------------CONTACTS AND MAP---------------------------------------------- */
-     .contactsection {
+    /* ------------------------------------CONTACTS AND MAP---------------------------------------------- */
+    .contactsection {
         background-color: antiquewhite;
         display: flex;
         align-content: center;
@@ -155,20 +163,58 @@
     .main-article h3 {
         font-size: x-large;
     }
+
     /* ------------------------------------------GLLERY ----------------------------------------------- */
     .gallery {
         margin-top: 1em;
         margin-bottom: 1em;
         grid-template-rows: repeat(5, 1fr);
         grid-template-columns: repeat(2, 49%);
-        width:75%;
+        width: 75%;
         height: auto;
         margin-bottom: 1em;
         grid-gap: 1em;
     }
+
     #gallery {
         width: 75.5%;
         margin: 1.2em 12.5% 0 12.5%;
 
     }
+
+    #thankyou {
+        margin: 8em 0
+    }
+
+    #thankyoupar {
+        margin-bottom: 6em;
+    }
+
+    #thankyoupar p {
+        font-size: x-large;
+    }
+
+
+    /* --------------------------------------- INPUT ----------------------------------------------- */
+
+    form p {
+        font-size: x-large;
+    }
+
+    legend {
+        font-size: x-large;
+    }
+
+    #selectregion {
+        font-size: x-large;
+    }
+
+    input[type=submit] {
+        font-size: xx-large;
+    }
+
+    label {
+        font-size: larger
+    }
+
 }
