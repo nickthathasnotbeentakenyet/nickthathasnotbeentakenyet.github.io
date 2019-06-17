@@ -41,26 +41,25 @@
     </nav>
     <!-- ***************************************MAIN******************************************** -->
     <main>
-        <form method="GET" action="thanks.html" name="thank_you">
+        <h2 id="stormhead">Storm Reporting Form</h2>
+        <form method="post" action="thanks.html" name="thank_you">
             <fieldset>
                 <legend>User information:</legend>
-                <p>First name:</p>
-                <input type="text" name="firstname" pattern="[A-Za-z]{5,}" required>
-                <p>Last name:</p>
-                <input type="text" name="lastname" pattern="[A-Za-z]{5,}" required>
-                <p>e-mail:</p>
-                <input type="email" name="email" placeholder="example@gmail.com">
-                <p>Phone number:</p>
-                <input type="tel" required placeholder="+1-xxx-xxx-xxxx" name="phone">
-                <p>Zip code:</p>
-                <input type="number" required name="zip">
+                <label for="name"> Full Name: </label>
+                <input type="text" name="name" id="name" pattern="[A-Za-z\s]{5,}" required>
+                <label for="email"> e-mail: </label>
+                <input type="email" name="email" id="email" placeholder="example@gmail.com">
+                <label for="phone"> Phone Number:</label>
+                <input type="tel" required placeholder="+1-xxx-xxx-xxxx" name="phone" id="phone">
+                <label for="zip"> Zip Code: </label>
+                <input type="number" required name="zip" id="zip">
             </fieldset>
             <fieldset>
                 <legend>Storm information:</legend>
-                <p>Storm date:</p>
-                <input type="date" name="date">
-                <p>Storm type:</p>
-                <input list="stormTypes" name="stormtype">
+                <label for="date"> Storm date:</label>
+                <input type="date" name="date" id="date">
+                <label for="stormtype"> Storm type:</label>
+                <input list="stormTypes" name="stormtype" id="stormtype">
                 <datalist id="stormTypes">
                     <option value="Flash Flood"></option>
                     <option value="Hail"></option>
@@ -68,12 +67,12 @@
                     <option value="Thunderstorm"></option>
                     <option value="Tornado"></option>
                 </datalist>
-                <p>Storm severity:</p>
-                <input type="range" id="stormrating" value="5" min="1" max="10" step="1"
+                <label for="stormrating"> Storm severity:</label>
+                <input type="range" id="stormrating" name="severity" value="5" min="1" max="10" step="1"
                     oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
                 <span id="ratingvalue">5</span>
-                <p>Storm region:</p>
-                <select id="selectregion">
+                <label for="selectregion"> Storm region:</label>
+                <select id="selectregion" name="region">
                     <option value="selectregion" selected disabled>Select region</option>
                     <option value="preston">Preston</option>
                     <option value="sugarCity">Sugar City</option>
@@ -97,9 +96,9 @@
             </fieldset>
             <fieldset>
                 <legend>Comment here:</legend>
-                <textarea id="comment" name="commentarea" cols="37" rows="5"></textarea>
+                <textarea id="comment" name="commentarea" cols="32" rows="5"></textarea>
             </fieldset>
-            <input type="submit" id="submitbutton" name="submit">
+            <input type="submit" value="Submit Storm Information" id="submitbutton" name="submit">
         </form>
 
     </main>

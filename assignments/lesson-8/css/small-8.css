@@ -287,7 +287,7 @@ footer p {
 
 /* --------------------------------------- INPUT ----------------------------------------------- */
 input::placeholder {
-  color: #191919;
+  color: #F56C6C;
   text-shadow: whitesmoke 1px 1px;
 }
 
@@ -332,7 +332,6 @@ input:focus:-ms-input-placeholder {
 }
 
 form {
-  background-color: rgb(180, 241, 168);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.2fr;
@@ -368,21 +367,17 @@ textarea {
 }
 
 input:invalid {
-  background-color: #F56C6C;
-  color: #fff;
+  color: #F56C6C;
   font-weight: bold;
-  text-shadow: #191919 1px 1px;
 }
 
 input:valid {
-  background-color: lightgreen;
-  color: #000;
+  color: green;
   font-weight: bold
 }
 
 input[type=submit] {
   width: 100%;
-  ;
   background-color: lightskyblue;
   color: #ff3838;
   text-shadow: whitesmoke 2px 1px;
@@ -398,8 +393,43 @@ input[type=submit]:hover {
   text-shadow: black 1px 1px
 }
 
+input {
+  border-left: lightskyblue 5px solid;
+  padding: 5px;
+  border-top: lightskyblue 1px solid;
+  border-bottom: lightskyblue 1px solid;
+  border-right: lightskyblue 1px solid;
+}
+
+#stormrating,
+#selectregion {
+  border: none;
+}
+
+#selectregion {
+  padding: 3px;
+  background-color: lightskyblue;
+  color: whitesmoke;
+  text-shadow: #ff3838 1px 1px;
+}
+
+#ratingvalue {
+  color: green;
+  margin-left: 3.6em;
+}
+
+#stormhead {
+  width: 100%;
+  margin: 1.2em 0 0;
+  background-color: lightskyblue;
+  color: whitesmoke;
+  text-shadow: #ff3838 1px 2px;
+  padding: 0.1em 0;
+}
+
 label {
-  font-size: large
+  font-size: large;
+  margin-top: 0.4em;
 }
 
 /* -------------------------------------INPUT RANGE----------------------------------------------- */
