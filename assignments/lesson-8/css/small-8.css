@@ -332,9 +332,12 @@ input:focus:-ms-input-placeholder {
 }
 
 form {
+  margin-bottom: 2em;
+  padding-top: 2em;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.2fr;
+  background-color: rgb(233, 247, 247)
 }
 
 fieldset {
@@ -352,10 +355,12 @@ legend {
 }
 
 textarea {
-  background-color: lightcyan;
   color: #191919;
   text-shadow: whitesmoke 1px 1px;
   font-size: large;
+  font-family: 'lobster two';
+  font-weight: bold;
+  border-left: lightskyblue 5px solid;
 }
 
 #selectregion {
@@ -365,7 +370,15 @@ textarea {
   font-size: larger;
   text-shadow: #191919 1px 1px;
 }
-
+.reg1 {
+  color: #ff3838;
+  font-weight: bold;
+}
+.reg {
+  color: green;
+  font-weight: bold;
+  text-shadow: #fff 1px 1px;
+}
 input:invalid {
   color: #F56C6C;
   font-weight: bold;
@@ -384,7 +397,7 @@ input[type=submit] {
   font-size: large;
   font-weight: bolder;
   font-family: Amaranth;
-  padding: 0.3em 0
+  padding: 0.3em 0;
 }
 
 input[type=submit]:hover {
@@ -402,7 +415,8 @@ input {
 }
 
 #stormrating,
-#selectregion {
+#selectregion,
+#submitbutton {
   border: none;
 }
 
@@ -415,7 +429,7 @@ input {
 
 #ratingvalue {
   color: green;
-  margin-left: 3.6em;
+  margin-left: 1em;
 }
 
 #stormhead {

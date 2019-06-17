@@ -46,7 +46,7 @@
             <fieldset>
                 <legend>User information:</legend>
                 <label for="name"> Full Name: </label>
-                <input type="text" name="name" id="name" pattern="[A-Za-z\s]{5,}" required>
+                <input type="text" name="name" id="name" pattern="[A-Za-z\s]{5,}" required> 
                 <label for="email"> e-mail: </label>
                 <input type="email" name="email" id="email" placeholder="example@gmail.com">
                 <label for="phone"> Phone Number:</label>
@@ -59,7 +59,7 @@
                 <label for="date"> Storm date:</label>
                 <input type="date" name="date" id="date">
                 <label for="stormtype"> Storm type:</label>
-                <input list="stormTypes" name="stormtype" id="stormtype">
+                <input list="stormTypes" name="stormtype" id="stormtype" placeholder="select one">
                 <datalist id="stormTypes">
                     <option value="Flash Flood"></option>
                     <option value="Hail"></option>
@@ -67,16 +67,16 @@
                     <option value="Thunderstorm"></option>
                     <option value="Tornado"></option>
                 </datalist>
-                <label for="stormrating"> Storm severity:</label>
+                <label for="stormrating"> Storm severity:<span id="ratingvalue">5</span> </label>
                 <input type="range" id="stormrating" name="severity" value="5" min="1" max="10" step="1"
                     oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
-                <span id="ratingvalue">5</span>
+                
                 <label for="selectregion"> Storm region:</label>
                 <select id="selectregion" name="region">
-                    <option value="selectregion" selected disabled>Select region</option>
-                    <option value="preston">Preston</option>
-                    <option value="sugarCity">Sugar City</option>
-                    <option value="fishHaven">Fish Haven</option>
+                    <option class="reg1" value="selectregion" selected disabled>Select region</option>
+                    <option class="reg" value="preston">Preston</option>
+                    <option class="reg" value="sugarCity">Sugar City</option>
+                    <option class="reg" value="fishHaven">Fish Haven</option>
                 </select>
             </fieldset>
             <fieldset>
@@ -98,7 +98,7 @@
                 <legend>Comment here:</legend>
                 <textarea id="comment" name="commentarea" cols="32" rows="5"></textarea>
             </fieldset>
-            <input type="submit" value="Submit Storm Information" id="submitbutton" name="submit">
+            <input id="submitbutton" type="submit" value="Submit Storm Information    &rangle;&rangle;&rangle;" id="submitbutton" name="submit">
         </form>
 
     </main>

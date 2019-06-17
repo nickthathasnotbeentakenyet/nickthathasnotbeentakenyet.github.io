@@ -43,7 +43,6 @@
     /* --------------------------------------- INPUT ----------------------------------------------- */
 
     form {
-        margin: 2em 0;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 0.7fr 0.1fr;
     }
