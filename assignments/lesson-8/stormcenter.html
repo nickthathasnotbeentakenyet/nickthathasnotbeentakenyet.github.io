@@ -46,7 +46,7 @@
             <fieldset>
                 <legend>User information:</legend>
                 <label for="name"> Full Name: </label>
-                <input type="text" name="name" id="name" pattern="[A-Za-z\s]{5,}" required> 
+                <input type="text" name="name" id="name" pattern="[A-Za-z\s]{5,}" required>
                 <label for="email"> e-mail: </label>
                 <input type="email" name="email" id="email" placeholder="example@gmail.com">
                 <label for="phone"> Phone Number:</label>
@@ -70,7 +70,7 @@
                 <label for="stormrating"> Storm severity:<span id="ratingvalue">5</span> </label>
                 <input type="range" id="stormrating" name="severity" value="5" min="1" max="10" step="1"
                     oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
-                
+
                 <label for="selectregion"> Storm region:</label>
                 <select id="selectregion" name="region">
                     <option class="reg1" value="selectregion" selected disabled>Select region</option>
@@ -98,7 +98,8 @@
                 <legend>Comment here:</legend>
                 <textarea id="comment" name="commentarea" cols="32" rows="5"></textarea>
             </fieldset>
-            <input id="submitbutton" type="submit" value="Submit Storm Information    &rangle;&rangle;&rangle;" id="submitbutton" name="submit">
+            <input type="submit" value="Submit Storm Information    &rangle;&rangle;&rangle;"
+                id="submitbutton" name="submit">
         </form>
 
     </main>
