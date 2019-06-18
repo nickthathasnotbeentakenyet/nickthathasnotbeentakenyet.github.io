@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>Preston Town Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description"
+        content="Preston town page. Preston, Idago. Where the city meets the mountains. Franklin county, Idaho. USA.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/small-8.css">
+    <link rel="stylesheet" href="css/medium-8.css">
+    <link rel="stylesheet" href="css/large-8.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster+Two&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth&display=swap">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8X8H-hu-yOjP69iIibBt7XOltgbPkXnc"></script>
+</head>
+<!-- *********************************HEADER PART****************************** -->
+
+<body>
+    <header>
+        <img class="logo" src="images/logo.png" alt="Dry Umbrella logo">
+        <div class="headings">
+            <h1 class="sitename"><span class="dry">Dry</span>Umbrella</h1>
+            <div class="motto">When it's raining stay home.<br> Keep your umbrella dry.</div>
+        </div>
+
+    </header>
+    <nav>
+        <ul class="navigation resposive">
+            <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a> </li>
+            <li><a href="#">Home</a></li>
+            <li><a href="preston-8.html" class="active">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li><a href="stormcenter.html">Storm Center</a></li>
+            <li><a href="gallery-8.html">Gallery</a></li>
+        </ul>
+    </nav>
+    <!-- *********************************HERO && WEATHER STATS************************************ -->
+    <main>
+        <h2>Preston, Idaho</h2>
+        <div class="herodiv">
+            <picture>
+                <source srcset="images/new_prestonmainpic-800.jpg" media="(min-width: 35em)">
+                <source srcset="images/new_prestonmainpic-1600.jpg" media="(min-width: 70em)">    
+                <img src="images/new_prestonmainpic-500.jpg" alt="Preston town picture. Franklin county, Idaho">
+            </picture>
+            <section class="stats">
+                <h3 id="statsheading"> Weather Stats</h3>
+                <p><em class="left">Currently :</em> <span id="current" class="wstats">Cloudy</span></p>
+                <p><em class="left">High :</em> <span id="temperature" class="wstats">45&#8457;</span></p>
+                <p><em class="left">Wind Speed :</em> <span id="windspeed" class="wstats">12mph</span></p>
+                <p><em class="left">WindChill : </em><span id="windchill" class="wstats"></span></p>
+                <p><em class="left">Humidity : </em><span id="humid" class="wstats">78&percnt;</span></p>
+            </section>
+        </div>
+        <!-- ******************************5 DAY FORECAST************************************** -->
+        <section class="forecast5">
+            <h2>5 Day Forecast</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="images/cloudy.png" alt="cloud"><br> Cloudy
+                        </td>
+                        <td>
+                            <img src="images/rain.png" alt="rain"><br> Rain </td>
+                        <td>
+                            <img src="images/sun.png" alt="sun"><br> Sunny </td>
+                        <td>
+                            <img src="images/sun.png" alt="sun"><br> Sunny </td>
+                        <td>
+                            <img src="images/sun.png" alt="sun"><br> Sunny </td>
+                        <td>
+                            <img src="images/lightning.png" alt="lightning"><br> Ligtning
+                        </td>
+                    </tr>
+            </table>
+        </section>
+        <!-- ************************************MAIN ARTICLE******************************************** -->
+        <article class="main-article">
+
+            <h3> Barbecue Time </h3>
+            <p class="author">By Professor W. Ikipedia</p>
+            <p>
+                <picture>
+                    <source srcset="images/barbacue-1880.jpeg" media="(min-width: 35em)">
+                    <img class="floating" src="images/barbacue-500.jpeg" alt="Barbacue picture. Grass. Hands. Meat">
+                </picture>
+                Barbecue or barbeque (informally BBQ or the Australian term barbie) is a cooking method, a style of
+                food, and a name for a meal or gathering at which this style of food is cooked and served.
+
+                A barbecue can refer to the cooking method itself, the meat cooked this way, or to a type of social
+                event featuring this type of cooking. Barbecuing is usually done outdoors by smoking the meat over wood
+                or charcoal. Restaurant barbecue may be cooked in large, specially-designed brick or metal ovens.
+                Barbecue is practiced in many areas of the world and there are numerous regional variations.
+
+                Barbecuing techniques include smoking, roasting or baking, braising and grilling. The technique for
+                which it is named involves cooking using smoke at low temperatures and long cooking times (several
+                hours). Baking uses an oven to convection cook with moderate temperatures for an average cooking time of
+                about an hour. Braising combines direct, dry heat charbroiling on a ribbed surface with a broth-filled
+                pot for moist heat. Grilling is done over direct, dry heat, usually over a hot fire for a few minutes.
+            </p>
+
+        </article>
+    </main>
+    <!-- *****************************************CONTACT INFO ***************************************** -->
+    <section class="contactsection">
+        <div class="contacts">
+            <img class="mapimage" src="images/map.png" alt="Preston town map">
+            <h3 class="sitename"><span class="dry">Dry</span>Umbrella</h3>
+
+
+            &xodot; 30 N 1st E <br>
+            Preston, ID 83263 <br>
+            &phone; 999 999 999 <br>
+            &#9993; DryUmbrella@du.com <br>
+
+            <a class="social" href="https://telegram.org" target="_blank"><img src="images/telegram.png"
+                    alt="Telegram logo" width="30"></a>
+            <a class="social" href="http://facebook.com" target="_blank"><img src="images/facebook.png"
+                    alt="Facebook logo" width="30"></a>
+            <a class="social" href="http://plus.google.com" target="_blank"><img src="images/google.png"
+                    alt="Google+ logo" width="30"></a>
+
+
+            <!-- ******************************MAP****************************************** -->
+            <div id="map" class="map">
+                <script>
+                    function initMap() {
+                        var centerLatLng = new google.maps.LatLng(42.0905677, -111.8866767, 14);
+                        var mapOptions = {
+                            center: centerLatLng,
+                            zoom: 8
+                        };
+                        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                    }
+                    google.maps.event.addDomListener(window, "load", initMap);
+                </script>
+            </div>
+        </div>
+
+    </section>
+    <!-- **************************************FOOTER******************************************** -->
+    <footer>
+        <p>&copy; <span id="currentdate"></span> | Designed by Arkadii Lantukh | DryUmbrella</p>
+    </footer>
+    <!-- ************************************** SCRIPTS ******************************************-->
+
+    <script src="js/hamburger.js"></script>
+    <script src="js/windchill.js"></script>
+    <script src="js/currentdate.js"></script>
+</body>
+
+</html>

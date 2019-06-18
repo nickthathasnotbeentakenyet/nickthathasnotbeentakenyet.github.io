@@ -1,0 +1,36 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+table {
+    margin: 3em auto;
+    box-shadow: 10px 10px 10px  #628ca6;
+    border-collapse: collapse;
+}
+td, th {
+    text-align: center;
+    padding: 0.5em 0.7em;
+    border: 1.5px solid #B2A8A4;
+}
+thead th{
+    font-size: 1.8em;
+    font-weight: bold;
+}
+th {
+    background-color:  #7fb9c2;
+    font-size: large;
+    font-weight: bold;
+}
+tr {
+    background-color: #e7ffed;
+}
+tr:nth-child(even){
+    background-color: #e7f0ed;
+}
+.bla-bla-bla{
+    background-color: #628ca6;
+    color: white;
+}
+tfoot tr{
+    background-color: #7fb9c2;
+    font-size: small;
+}
