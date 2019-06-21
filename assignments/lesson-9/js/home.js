@@ -1,23 +1,23 @@
 const requestURL = "https://nickthathasnotbeentakenyet.github.io/assignments/lesson-9/js/home.json";
-let request = new XMLHttpRequest();
+const request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
 
 request.onload = function () {
-  let towndata = request.response;
-  let towns = towndata['towns'];
+  const towndata = request.response;
+  const towns = towndata['towns'];
   
-  let output = document.querySelector('section');
+  const output = document.querySelector('section');
   towns.forEach(town => {
     if (town.name == 'Preston' || town.name == 'Fish Haven' || town.name == 'Soda Springs') {
-      let myh3 = document.createElement('h3');
-      let para = document.createElement('p');
-      let para2 = document.createElement('p');
-      let para3 = document.createElement('p');
-      let para4 = document.createElement('p');
-      let img = document.createElement("IMG");
-      img.src = "images/main-preston.jpeg";     
+      const myh3 = document.createElement('h3');
+      const para = document.createElement('p');
+      const para2 = document.createElement('p');
+      const para3 = document.createElement('p');
+      const para4 = document.createElement('p');
+      const img = document.createElement("IMG");
+      img.src = 'images/main-${town.name.replace(/\\s/g, "").toLowerCase()}.jpeg';      
  
       myh3.textContent = town.name;
       para.textContent = town.motto;
