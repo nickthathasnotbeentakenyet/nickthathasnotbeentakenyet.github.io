@@ -79,7 +79,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-flow: column;
     grid-template-rows: repeat(5, 0.2fr) 1fr ;
-    margin: 2em 0 0;
     grid-column-gap: 2em;
   }
 
