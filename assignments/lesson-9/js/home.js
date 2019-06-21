@@ -16,17 +16,21 @@ request.onload = function () {
       let para2 = document.createElement('p');
       let para3 = document.createElement('p');
       let para4 = document.createElement('p');
+      let img = document.createElement("IMG");
+      img.src = "images/main-preston.jpeg";     
+ 
       myh3.textContent = town.name;
       para.textContent = town.motto;
       para2.textContent = "Year Founded: " + town.yearFounded;
       para3.textContent = "Population: " + town.currentPopulation;
       para4.textContent = "Annual Rain Fall: " + town.averageRainfall + "''";
-      
+
       output.appendChild(myh3);
       output.appendChild(para);
       output.appendChild(para2);
       output.appendChild(para3);
       output.appendChild(para4);
+      output.appendChild(img);
 
     }
     

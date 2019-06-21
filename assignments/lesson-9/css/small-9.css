@@ -566,34 +566,30 @@ input[type=range]::-ms-thumb {
 .homesection {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(15, 1fr)
-  
-}
+  grid-gap: 0;
+  background-color: whitesmoke;
+  padding: 0 1em;
+  }
 .homesection h3, .homesection p {
-  background-color: lightskyblue;
   text-align: center;
 }
+
+.homesection img {
+  box-shadow: none;
+  width: 100%;
+  margin: 0 0 3em;
+}
 .homesection p {
-  padding: 0;
+  padding-bottom: 0.7em;
   font-size: larger;
-  color: whitesmoke;
-  text-shadow: #ff3838 2px 2px;
+  text-shadow: lightgreen  1px 1px;
+  color:#191919;
+ 
 }
 .homesection h3 {
   font-size: xx-large;
   text-shadow: white 2px 2px;
-}
-.homepicture {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-flow: row;
-  grid-template-rows: 1fr;
-  margin: 2em 0;
-  grid-column-gap: 2em;
-  width: 100%;
-  height: auto;
-  margin: 0 0 2em;
-}
-.homepicture img {
-  box-shadow: none;
+  padding: 0.3em 0;
+  background-color: lightgreen;
+  margin-bottom: 0.5em;
 }
