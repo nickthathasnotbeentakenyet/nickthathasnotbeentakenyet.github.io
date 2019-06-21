@@ -568,7 +568,7 @@ input[type=range]::-ms-thumb {
   grid-template-columns: 1fr;
   grid-gap: 0;
   background-color: whitesmoke;
-  margin: 1em 0 0;
+  margin: 1em 0 ;
   }
 .homesection h3, .homesection p {
   text-align: center;
