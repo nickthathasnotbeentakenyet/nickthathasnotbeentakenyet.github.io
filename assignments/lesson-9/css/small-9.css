@@ -582,9 +582,8 @@ input[type=range]::-ms-thumb {
 .homesection p {
   padding-bottom: 0.7em;
   font-size: larger;
-  text-shadow: lightgreen  1px 1px;
   color:#191919;
- 
+  text-shadow: lightgreen  1px 1px;
 }
 .homesection h3 {
   font-size: xx-large;

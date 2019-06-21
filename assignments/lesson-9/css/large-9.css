@@ -81,6 +81,10 @@
     grid-template-rows: repeat(5, 0.2fr) 1fr ;
     grid-column-gap: 2em;
   }
-
-
+.homesection img, .homesection h3{
+    box-shadow: 10px 10px 10px lightslategrey;
+}
+.homesection p {
+    text-shadow: lightgreen  1px 1px, 5px 5px 8px lightslategrey;
+}
 }
