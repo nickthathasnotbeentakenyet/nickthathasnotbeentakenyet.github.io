@@ -16,8 +16,15 @@ request.onload = function () {
       const para2 = document.createElement('p');
       const para3 = document.createElement('p');
       const para4 = document.createElement('p');
-      const img = document.createElement("IMG");
-      img.src = 'images/main-${town.name.replace(/\\s/g, "").toLowerCase()}.jpeg';      
+      const img = document.createElement('img');
+     
+      if (town.name == 'Preston'){
+        img.src = "images/main-preston.jpeg"
+      }    
+      else if (town.name == 'Fish Haven') {
+        img.src = "images/main-fishhaven.jpeg"
+      }
+      else {img.src = "images/main-sodasprings.jpeg"}
  
       myh3.textContent = town.name;
       para.textContent = town.motto;
