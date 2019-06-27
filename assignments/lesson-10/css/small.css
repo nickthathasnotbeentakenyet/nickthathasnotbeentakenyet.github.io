@@ -235,8 +235,15 @@ footer {
 
 footer p {
   text-align: center;
+  font-size: small;
 }
-
+#OpenWeather {
+  text-decoration: none;
+  color: white;
+}
+#OpenWeather:hover {
+  color: #ff3838;
+}
 /* ---------------------------------------GALLERY---------------------------------------------- */
 
 .gallery {
