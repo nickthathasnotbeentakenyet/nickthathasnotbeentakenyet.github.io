@@ -239,10 +239,10 @@ footer p {
 }
 #OpenWeather {
   text-decoration: none;
-  color: white;
+  color:  #ff3838;
 }
 #OpenWeather:hover {
-  color: #ff3838;
+ text-decoration: underline; 
 }
 /* ---------------------------------------GALLERY---------------------------------------------- */
 

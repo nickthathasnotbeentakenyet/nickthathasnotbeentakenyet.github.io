@@ -19,12 +19,15 @@ request.onload = function () {
       const img = document.createElement('img');
      
       if (town.name == 'Preston'){
-        img.src = "images/main-preston.jpeg"
+        img.src = "images/main-preston.jpeg";
+        img.setAttribute("alt", "Picture of Preston");
       }    
       else if (town.name == 'Fish Haven') {
-        img.src = "images/main-fishhaven.jpeg"
+        img.src = "images/main-fishhaven.jpeg";
+        img.setAttribute("alt", "Fish Haven landscape");
       }
-      else {img.src = "images/main-sodasprings.jpeg"}
+      else {img.src = "images/main-sodasprings.jpeg";
+      img.setAttribute("alt", "Soda Springs town view");}
  
       myh3.textContent = town.name;
       para.textContent = town.motto;
