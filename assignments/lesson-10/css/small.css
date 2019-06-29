@@ -244,6 +244,28 @@ footer p {
 #OpenWeather:hover {
  text-decoration: underline; 
 }
+
+#prestonevents {
+  width: auto;
+  margin: 1em 0 1.5em;
+  padding: 1em;
+  border: lightskyblue 5px solid;
+  background-color: lightcyan;
+  box-shadow: 0 0 30px lightskyblue;
+}
+#prestonevents h2 {
+padding: 0;
+text-decoration: underline;
+margin-bottom: 0.5em;
+}
+#prestonevents p {
+  text-align: center;
+  font-size: large;
+}
+#prestonevents p::before {
+  content: "\272b";
+  padding-right: 0.3em;
+}
 /* ---------------------------------------GALLERY---------------------------------------------- */
 
 .gallery {
