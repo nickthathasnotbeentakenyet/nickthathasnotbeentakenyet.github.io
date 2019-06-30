@@ -23,7 +23,6 @@ forecast.onload = function () {
             document.getElementById('forecasticon' + count).setAttribute('src', "https://openweathermap.org/img/w/" + forecastData.list[i].weather[0].icon + ".png");
             document.getElementById('forecasticon' + count).setAttribute('alt', forecastData.list[i].weather[0].description);
             document.getElementById('dayforecast' + count).innerHTML = weekday[(new Date().getDay() + count - 1) % 7];
-
             count++;
         }
         if (count == 6) {

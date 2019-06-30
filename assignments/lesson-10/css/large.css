@@ -88,15 +88,4 @@
     text-shadow: lightgreen  1px 1px, 5px 5px 8px lightslategrey;
 }
 
-.events {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-  }
-#prestonevents {
-    width: 75%;
-    
-}
-
-
 }
