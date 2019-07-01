@@ -155,7 +155,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
       }
-      #prestonevents p {
+      #prestonevents ul {
         font-size: x-large;
       }
 

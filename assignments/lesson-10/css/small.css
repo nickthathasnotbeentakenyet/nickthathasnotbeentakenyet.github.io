@@ -257,11 +257,13 @@ padding: 0;
 text-decoration: underline;
 margin-bottom: 0.5em;
 }
-#prestonevents p {
+#prestonevents ul{
   text-align: center;
   font-size: large;
-}
-#prestonevents p::before {
+  list-style: none;
+  font-family: 'Amaranth', sans-serif;
+  }
+#prestonevents ul li::before {
   content: "\272b";
   padding-right: 0.3em;
 }
