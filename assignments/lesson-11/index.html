@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>DryUmbrella: Home Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description"
+        content=" Dryumbrella website | Weather | Franklin county, Idaho. USA | Preston, Idago. | Soda Springs | Fish Haven | Storm Center | Gallery ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster+Two&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth&display=swap">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+<!-- *********************************HEADER PART****************************** -->
+
+<body>
+    <header>
+        <img class="logo" src="images/logo.png" alt="Dry Umbrella logo">
+        <div class="headings">
+            <h1 class="sitename"><span class="dry">Dry</span>Umbrella</h1>
+            <div class="motto">When it's raining stay home.<br> Keep your umbrella dry.</div>
+        </div>
+
+    </header>
+    <nav>
+        <ul class="navigation resposive">
+            <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a> </li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="preston.html">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li><a href="stormcenter.html">Storm Center</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2 id="stormhead">Town Information</h2>
+        <section class="homesection">
+        </section>       
+    </main>
+    <!-- **************************************FOOTER******************************************** -->
+    <footer>
+        <p>&copy; <span class="dry">Dry</span><span class="sitename">Umbrella</span>  |  Designed by Arkadii Lantukh  |  <span id="currentdate"></span> |  Weather Info provided by <a href="https://openweathermap.org/" id="OpenWeather">OpenWeather</a></p>
+    </footer>
+    <!-- ************************************** SCRIPTS ******************************************-->
+    <script src="js/home.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/currentdate.js"></script>
+</body>
+
+</html>

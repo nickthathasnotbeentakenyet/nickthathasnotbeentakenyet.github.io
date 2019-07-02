@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>DryUmbrella: Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description"
+        content="Gallery. Weather pictures | Sun | Snow | Tornado | Wind | Rain | Rainbow | Clouds | Ligtning | Fog | Franklin county, Idaho | USA.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster+Two&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth&display=swap">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+</head>
+<!-- *************************************HEADER PART****************************************** -->
+
+<body>
+    <header>
+        <img class="logo" src="images/logo.png" alt="Dry Umbrella logo">
+        <div class="headings">
+            <h1 class="sitename"><span class="dry">Dry</span>Umbrella</h1>
+            <div class="motto">When it's raining stay home.<br> Keep your umbrella dry.</div>
+        </div>
+
+    </header>
+    <nav>
+        <ul class="navigation resposive">
+            <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a> </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="preston.html">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li><a href="stormcenter.html">Storm Center</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+        </ul>
+    </nav>
+    <!-- ***************************************MAIN******************************************** -->
+    <h3 id="gallery">Gallery</h3>
+    <main class="gallery">
+
+        <div>
+            <picture>
+                <source srcset="images/sun-1000.jpg" media="(min-width: 35em)">
+                <img src="images/sun-500.jpg" alt="Sunny weather. Sun rays. Trees. Grass. Blue sky">
+            </picture>
+            <p>Sunny weather over Preston</p>
+        </div>
+        <div>
+            <picture>
+                <source srcset="images/rainbow-1000.jpg" media="(min-width: 35em)">
+                <img src="images/rainbow-500.jpg" alt="Rainbow in front of mountains. Beautiful view.">
+            </picture>
+            <p>Rainbow south of Soda Springs</p>
+        </div>
+        <div>
+            <picture>
+                <source srcset="images/fog-1000.jpg" media="(min-width: 35em)">
+                <img src="images/fog-500.jpg" alt="Fog ahead. Trees. Fence. Forest road.">
+            </picture>
+            <p>Fog near Fish Haven</p>
+        </div>
+        <div>
+            <picture>
+                <source srcset="images/lightning-1000.jpg" media="(min-width: 35em)">
+                <img src="images/lightning-500.jpg" alt="Blue-purple sky. Lightnings.">
+            </picture>
+            <p>Ligtning strikes in Preston</p>
+        </div>
+        <div>
+            <picture>
+                <source srcset="images/rain-1000.jpg" media="(min-width: 35em)">
+                <img src="images/rain-500.jpg" alt="Rain. Wet trees. Rain drops. Puddles">
+            </picture>
+            <p>Rain flooded Franklin</p>
+        </div>
+        <div>
+            <picture>
+                <source srcset="images/wind-1000.jpg" media="(min-width: 35em)">
+                <img src="images/wind-500.jpg" alt="Strong wind. Leaning tree. Dark gray sky.">
+            </picture>
+            <p>Gail in the city of Fish Haven</p>
+        </div>
+        <div>
+            <picture>
+                <source srcset="images/tornado-1000.jpg" media="(min-width: 35em)">
+                <img src="images/tornado-500.jpg" alt="Tornado. Field. Flying mud and rocks. Scary.">
+            </picture>
+            <p>Tornado forming over Franklin county</p>
+        </div>
+        <div>
+            <picture>
+                <source srcset="images/snow-1000.jpg" media="(min-width: 35em)">
+                <img src="images/snow-500.jpg" alt="Snow. Christmas tree forest. Lots of white. Huge snow flakes.">
+            </picture>
+            <p>Preston covered in fresh snow</p>
+        </div>
+        <div>
+            <picture>
+                <source srcset="images/clouds-1000.jpg" media="(min-width: 35em)">
+                <img src="images/clouds-500.jpeg" alt="Dark gray stormy clouds">
+            </picture>
+            <p>Cold front over Franklin county</p>
+        </div>
+    </main>
+    <!-- **************************************FOOTER******************************************** -->
+    <footer>
+        <p>&copy; <span class="dry">Dry</span><span class="sitename">Umbrella</span>  |  Designed by Arkadii Lantukh  |  <span id="currentdate"></span> |  Weather Info provided by <a href="https://openweathermap.org/" id="OpenWeather">OpenWeather</a></p>
+    </footer>
+    <!-- ************************************** SCRIPTS ******************************************-->
+
+    <script src="js/hamburger.js"></script>
+    <script src="js/currentdate.js"></script>
+</body>
+
+</html>
