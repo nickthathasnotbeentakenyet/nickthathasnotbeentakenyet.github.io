@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>DryUmbrella: Fish Haven</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description"
+        content="Fish Haven town page. Fish Haven, Idago.Undiscovered paradise. Bear Lake. Franklin county, Idaho. USA.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chewy&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster+Two&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth&display=swap">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+<!-- *********************************HEADER PART****************************** -->
+
+<body>
+    <header>
+        <img class="logo" src="images/logo.png" alt="Dry Umbrella logo">
+        <div class="headings">
+            <h1 class="sitename"><span class="dry">Dry</span>Umbrella</h1>
+            <div class="motto">Keep your umbrella dry.</div>
+        </div>
+
+    </header>
+    <nav>
+        <ul class="navigation resposive">
+            <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a> </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="preston.html">Preston</a></li>
+            <li><a href="sodasprings.html">Soda Springs</a></li>
+            <li><a href="fishhaven.html" class="active">Fish Haven</a></li>
+            <li><a href="stormcenter.html">Storm Center</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+    <!-- *********************************HERO && WEATHER STATS************************************ -->
+    <main>
+        <h2>Fish Haven, Idaho</h2>
+        <div class="herodiv">
+            <picture>
+                <source srcset="images/fishhaven-1000.jpeg" media="(min-width: 35em)">
+                <source srcset="images/fishhaven-1200.jpeg" media="(min-width: 70em)">
+                <img src="images/fishhaven-800.jpeg" alt="Fish Haven town picture. Franklin county, Idaho">
+            </picture>
+            <section class="stats">
+                <h3 id="statsheading"> Weather Stats</h3>
+                <p><em class="left">Currently :</em> <span id="current" class="wstats">Cloudy</span></p>
+                <p><em class="left">High :</em> <span id="temperature" class="wstats"></span></p>
+                <p><em class="left">Wind Speed :</em> <span id="windspeed" class="wstats"></span></p>
+                <p><em class="left">WindChill : </em><span id="windchill" class="wstats"></span></p>
+                <p><em class="left">Humidity : </em><span id="humid" class="wstats"></span></p>
+            </section>
+        </div>
+        <!-- ******************************5 DAY FORECAST************************************** -->
+        <div class="events">
+            <section class="forecast5">
+                <h2>5 Day Forecast</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="dayforecast1"></th>
+                            <th id="dayforecast2"></th>
+                            <th id="dayforecast3"></th>
+                            <th id="dayforecast4"></th>
+                            <th id="dayforecast5"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="#" alt="" id="forecasticon1">
+                                <p id="forecasttemp1"></p>
+                            </td>
+                            <td><img src="#" alt="" id="forecasticon2">
+                                <p id="forecasttemp2"></p>
+                            </td>
+                            <td><img src="#" alt="" id="forecasticon3">
+                                <p id="forecasttemp3"></p>
+                            </td>
+                            <td><img src="#" alt="" id="forecasticon4">
+                                <p id="forecasttemp4"></p>
+                            </td>
+                            <td><img src="#" alt="" id="forecasticon5">
+                                <p id="forecasttemp5"></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="prestonevents">
+                <h2>Fish Haven Town Events</h2>
+                <ul id="eventsfishhaven"></ul>
+            </section>
+        </div>
+        <!-- ************************************MAIN ARTICLE******************************************** -->
+        <article class="main-article">
+
+            <h3> Rugby </h3>
+            <p class="author">By Professor W. Ikipedia</p>
+            <p>
+                <picture>
+                    <source srcset="images/rugby-800.jpg" media="(min-width: 35em)">
+                    <img class="floating" src="images/rugby-500.jpg" alt="Rugby. Boys playing on the field">
+                </picture>
+                Rugby football refers to the team sports of rugby league and rugby union.
+
+                Rugby football started about 1845 at Rugby School in Rugby, Warwickshire, England, although forms of
+                football in which the ball was carried and tossed date to medieval times. Rugby split into two sports in
+                1895, when twenty-one clubs split from the Rugby Football Union to form the Northern Rugby Football
+                Union, renamed the Rugby Football League in 1922, in the George Hotel, Huddersfield, over broken-time
+                payments to players who took time off work to play the sport, thus making rugby league the first code to
+                turn professional and pay players. It was a hundred years later in 1995, following the 1995 Rugby World
+                Cup in South Africa, that rugby union turned fully professional. The respective world governing
+                bodies are World Rugby (rugby union) and the Rugby League International Federation (rugby league).
+                <br>
+                Rugby football was one of many versions of football played at English public schools in the 19th
+                century. Although rugby league initially used rugby union rules, they are now wholly separate
+                sports. In addition to these two codes, both American and Canadian football evolved from rugby football
+                in the beginning of the 20th century..
+                <br><br>
+                The Greeks and Romans are known to have played many ball games, some of which involved the use of the
+                feet. The Roman game harpastum is believed to have been adapted from a Greek team game known as
+                "ἐπίσκυρος" (Episkyros) or "φαινίνδα" (phaininda), which is mentioned by a Greek playwright,
+                Antiphanes (388–311 BC) and later referred to by the Christian theologian Clement of Alexandria
+                (c.150-c.215 AD). These games appear to have resembled rugby football. The Roman
+                politician Cicero (106–42 BC) describes the case of a man who was killed whilst having a shave when a
+                ball was kicked into a barber's shop. Roman ball games already knew the air-filled ball, the
+                follis.Episkyros is recognised as an early form of football by FIFA.
+            </p>
+
+        </article>
+    </main>
+    <!-- *****************************************CONTACT INFO ***************************************** -->
+    <section class="contactsection">
+        <div class="contacts">
+            <img class="mapimage" src="images/fishhavenmap.png" alt="Fidh Haven town map">
+            <h3 class="sitename"><span class="dry">Dry</span>Umbrella</h3>
+
+
+            <br>&xodot; 30 N 1st E
+            <br>Preston, ID 83263
+            <br>&phone; 999 999 999
+            <br>&#9993; DryUmbrella@du.com
+            <br>
+            <a class="social" href="https://telegram.org" target="_blank"><img src="images/telegram.png"
+                    alt="Telegram logo" width="30"></a>
+            <a class="social" href="http://facebook.com" target="_blank"><img src="images/facebook.png"
+                    alt="Facebook logo" width="30"></a>
+            <a class="social" href="http://plus.google.com" target="_blank"><img src="images/google.png"
+                    alt="Google+ logo" width="30"></a>
+
+        </div>
+
+    </section>
+    <!-- **************************************FOOTER******************************************** -->
+    <footer>
+        <p>&copy; <span class="dry">Dry</span><span class="sitename">Umbrella</span> | Designed by Arkadii Lantukh |
+            <span id="currentdate"></span> | Weather Info provided by <a href="https://openweathermap.org/"
+                id="OpenWeather">OpenWeather</a></p>
+    </footer>
+    <!-- ************************************** SCRIPTS ******************************************-->
+
+    <script src="js/hamburger.js"></script>
+    <script src="js/currentdate.js"></script>
+    <script src="js/fishhavenweatherapi.js"></script>
+    <script src="js/fishhavenforecast.js"></script>
+    <script src="js/fishhavenevents.js"></script>
+</body>
+
+</html>
