@@ -17,8 +17,8 @@
                 "15 June 1969 - Groundbreaking",
                 "9 February 1972 - Dedicated"
             ],
-            "Ordinance": "Every hour from 6:00am to 6:00pm",
-            "Session": "Every hour from 6:00am to 6:00pm.",
+            "ordinance": "Every hour from 6:00am to 6:00pm",
+            "session": "Every hour from 6:00am to 6:00pm.",
             "closure": ["2019",
                 "Monday, 1 July 2019 - Monday, 12 August 2019",
                 "Monday, 2 September 2019",
@@ -58,8 +58,8 @@
                 "23 June 2007 - Groundbreaking",
                 "29 August 2010 - Dedicated"
             ],
-            "Ordinance": "Every hour from 6:00am to 6:00pm",
-            "Session": "Every hour from 6:00am to 6:00pm.",
+            "ordinance": "Every hour from 6:00am to 6:00pm",
+            "session": "Every hour from 6:00am to 6:00pm.",
             "closure": ["2019",
                 "Monday, 2 September 2019 - Monday, 16 September 2019",
                 "Wednesday, 25 December 2019",
@@ -88,8 +88,8 @@
                 "29 March 2003 - Groundbreaking",
                 "22 October 2006 - Dedicated"
             ],
-            "Ordinance": "Every hour from 6:00am to 6:00pm",
-            "Session": "Every hour from 6:00am to 6:00pm.",
+            "ordinance": "Every hour from 6:00am to 6:00pm",
+            "session": "Every hour from 6:00am to 6:00pm.",
             "closure": ["2019",
                 "Monday, 2 September 2019 - Monday, 16 September 2019",
                 "Saturday, 5 October 2019",
