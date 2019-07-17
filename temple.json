@@ -7,8 +7,8 @@
             ],
             "phone": "(1) 801-375-5775",
             "email": "provotemple@lds.org",
-            "services": ["Clothing rental available\n",
-                "Cafeteria available",\n
+            "services\n": ["Clothing rental available\n",
+                "Cafeteria available",
                 "No patron housing available",
                 "Distribution center nearby"
             ],
