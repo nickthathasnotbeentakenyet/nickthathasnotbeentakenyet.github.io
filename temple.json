@@ -89,10 +89,10 @@
             "ordinance": "Every hour from 6:00am to 6:00pm",
             "session": "Every hour from 6:00am to 6:00pm.",
             "closure": [
-                "2019:":[  " Monday, 2 September 2019 - Monday, 16 September 2019",
+                "2019:"[  " Monday, 2 September 2019 - Monday, 16 September 2019",
                 " Saturday, 5 October 2019",
                 " Tuesday, 24 December 2019 - Thursday, 26 December 2019"],
-                " 2020:":[   " Monday, 23 March 2020 - Monday, 6 April 2020",
+                " 2020:"[   " Monday, 23 March 2020 - Monday, 6 April 2020",
                 " Thursday, 18 June 2020 - Saturday, 20 June 2020",
                 " Monday, 14 September 2020 - Monday, 28 September 2020",
                 " Wednesday, 23 December 2020 - Saturday, 26 December 2020"]
