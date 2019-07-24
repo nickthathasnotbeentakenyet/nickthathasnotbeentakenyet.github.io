@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Temple Inn and Suites Service page. Full-time temple missionary information. ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/s.css">
+    <link rel="stylesheet" href="css/m.css">
+    <link rel="stylesheet" href="css/l.css">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Italianno&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <title>Temple Inn &amp; Suites | Missionary</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo1.svg" alt="Temple Inn logo image" class="logo">
+        <div class="headings">
+            <p class="name">Temple Inn &amp; Suites</p>
+            <p>The Church of </p>
+            <p><span class="jesus">Jesus Christ</span></p>
+            <p>of Latter-Day Saints</p>
+        </div>
+    </header>
+    <nav>
+        <ul class="navigation responsive">
+            <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a> </li>
+            <li><a href="templeInn.html">Home</a></li>
+            <li><a href="temple.html">Temple</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="service.html" class="active">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="missionarydiv">
+            <div>
+                <h2> Missionary Accomodations:</h2>
+                <ul>
+                    <li>&#x2714; Kitchenette suites</li>
+                    <li>&#x2714; Laundry Services</li>
+                    <li>&#x2714; Shuttles</li>
+                    <li>&#x2714; Excercise Room</li>
+                    <li>&#x2714; WiFi and TVs</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Room Arangements:</h2>
+                <ul>
+                    <li>&#x272D;&#x2730;&#x2730; Standard</li>
+                    <li>&#x272D;&#x272D;&#x2730; Suite</li>
+                    <li>&#x272D;&#x272D;&#x272D; Luxury</li>
+                </ul>
+            </div>
+        </div>
+        <div class="slideshow-container">
+            <div class="mySlides fade" id="slide1">
+                <img src="images/standard.jpg" style="width:100%" alt="hallway">
+                <div class="text">Standard</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/suite.jpeg" style="width:100%" alt="pool">
+                <div class="text">Suite</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/luxury.jpg" style="width:100%" alt="breakfast">
+                <div class="text">Luxury</div>
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <h2 class="contacthead">For more details and questions:</h2>
+        <form method="get" action="thanks.html" name="thankyou" class="contactform">
+            <fieldset>
+                <legend>Contact info</legend>
+                <div class="row rowmiss">
+                    <label for="fname"> First Name: <span class="req">*</span></label>
+                    <input type="text" name="fname" id="fname" pattern="[A-Za-z\s]{2,}" required placeholder="Alex">
+                </div>
+                <div class="row rowmiss">
+                    <label for="lname"> Last Name: <span class="req">*</span></label>
+                    <input type="text" name="lname" id="lname" pattern="[A-Za-z\s]{2,}" required placeholder="Smith">
+                </div>
+                <div class="row rowmiss">
+                    <label for="email"> E-mail: <span class="req">*</span></label>
+                    <input type="email" name="email" id="email" placeholder="example@mail.com">
+                </div>
+                <div class="row rowmiss">
+                    <label for="phone"> Phone Number: <span class="req">*</span></label>
+                    <input type="tel" required placeholder="+1-555-555-5555" name="phone" id="phone">
+                </div>
+
+                <div class="row rowmiss">
+                    <label for="comment"> Message:</label>
+                    <textarea id="comment" name="commentarea" placeholder="&#x27A5; Please, leave us a note.." cols="25"
+                        rows="5"></textarea>
+                </div>
+            </fieldset>
+            <input type="submit" value="Submit" id="submitbutton" name="submit">
+        </form>
+    </main>
+    <div class="backto">
+        <a href="service.html">Back to services page</a>
+    </div>
+    <footer>
+        <p> <span id="currentdate"></span> &copy; Designed by Arkadii Lantukh | <a class="attr"
+                href="attributions.html">Attributions</a> </p>
+    </footer>
+    <script src="js/hamburger.js"></script>
+    <script src="js/currentdate.js"></script>
+    <script src="js/slideshow.js"></script>
+</body>
+
+</html>

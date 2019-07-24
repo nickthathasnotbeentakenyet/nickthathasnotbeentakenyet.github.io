@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="Temple Inn and Suites.Weather in Provo temple, Helsinki temple, Kiev temple, Salt Lake temple. Session, ordinance schedule. Temple closure">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/s.css">
+    <link rel="stylesheet" href="css/m.css">
+    <link rel="stylesheet" href="css/l.css">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Italianno&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <title>Temple Inn &amp; Suites | Temple</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo1.svg" alt="Temple Inn logo image" class="logo">
+        <div class="headings">
+            <p class="name">Temple Inn &amp; Suites</p>
+            <p>The Church of </p>
+            <p><span class="jesus">Jesus Christ</span></p>
+            <p>of Latter-Day Saints</p>
+        </div>
+    </header>
+    <nav>
+        <ul class="navigation responsive">
+            <li><a href="#" onclick="toggleMenu()">&#9776; Menu</a> </li>
+            <li><a href="templeInn.html">Home</a></li>
+            <li><a href="temple.html" class="active">Temple</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="templemain" id="top">
+        <h1 class="contacthead">Temples</h1>
+        <!-- <h3 class="contacthead backgr">Weather info</h3> -->
+        <div class="weather">
+            <div>
+                <h4>Provo</h4>
+                <p id="provot"></p>
+                <p id="provoc"></p>
+            </div>
+            <div>
+                <h4>Kiev</h4>
+                <p id="kievt"></p>
+                <p id="kievc"></p>
+            </div>
+            <div>
+                <h4>Helsinki</h4>
+                <p id="helsinkit"></p>
+                <p id="helsinkic"></p>
+            </div>
+            <div>
+                <h4>Salt Lake</h4>
+                <p id="saltlaket"></p>
+                <p id="saltlakec"></p>
+            </div>
+        </div>
+        <section class="templesection">
+            <h3 class="hidden">Easter egg is found!</h3>
+        </section>
+        <a href="#top" class="updown">top of page</a>
+    </main>
+    <footer>
+        <p> <span id="currentdate"></span> &copy; Designed by Arkadii Lantukh | <a class="attr"
+                href="attributions.html">Attributions</a> </p>
+    </footer>
+    <script src="js/hamburger.js"></script>
+    <script src="js/currentdate.js"></script>
+    <script src="js/temple.js"></script>
+    <script src="js/weather.js"></script>
+</body>
+
+</html>
