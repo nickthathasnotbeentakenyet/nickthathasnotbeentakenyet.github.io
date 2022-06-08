@@ -1,0 +1,46 @@
+h1,
+h2,
+pre {
+    color: rgb(64, 81, 107);
+}
+h1{
+    background-color: teal;
+    color: white;
+    padding: .5em;
+    border-radius: 10px;
+}
+h2{
+    color: teal;
+}
+pre {
+    font-size: x-large;
+    color: rgb(29, 43, 63);
+}
+
+q {
+    font-size: 1.3em;
+    color: white;
+    display: inline-block;
+    background-color:darkkhaki;
+    text-shadow: 1px 1px black;
+    padding: .5em;
+    border-radius: 10px;
+    box-shadow: 10px 10px brown;
+}   
+q::before{
+    content: "question";
+    display: block;
+    color: brown;
+}
+.code{
+    background-color: brown;
+    color: white;
+    padding: .5em;
+    border-radius:10px;
+    box-shadow: 10px 10px darkkhaki;
+}
+.code::before{
+    content: "<code>";
+    display: block;
+    color: darkkhaki;
+}
