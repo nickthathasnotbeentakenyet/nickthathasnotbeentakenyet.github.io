@@ -45,3 +45,15 @@ header img {
 footer {
     font-size: small;
 }
+details summary{
+    font-size: x-large;
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+    color: teal;
+    font-size: larger;
+}
+a:hover{
+    color: coral;
+}

@@ -44,3 +44,15 @@ q::before{
     display: block;
     color: darkkhaki;
 }
+a {
+    text-decoration: none;
+    color: teal;
+    font-size: x-large;
+    font-weight: bold;
+    border: 2px solid teal;
+    padding: .2em .3em;
+    border-radius: 50px;
+}
+a:hover{
+    color: coral;
+}
