@@ -109,6 +109,10 @@ a:hover{
     background-color: gold;
     box-shadow: 5px 5px lightgoldenrodyellow;
 }
+.buttons button:hover{
+    background-color:darkgrey;
+    cursor: pointer;
+}
 .buttons legend{
     font-family: Recursive, sans-serif;
     font-variation-settings: var(--casl);
