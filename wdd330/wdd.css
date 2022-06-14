@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..800,0..1,0..1,0..1&display=swap");
+:root {
+    --mono: "MONO" 1; /* Monospace: Sans (natural-width) or Mono (fixed-width) */
+    --casl: "CASL" 1; /* Casual: Linear to Casual */
+    --wght: "wght" 600; /* Weight: Light to ExtraBlack; usually set with `font-weight` */
+    --slnt: "slnt" -7; /* Slant: 0 to -15 degrees, auto cursive at -14 */
+    --CRSV: "CRSV" 0.5; /* Cursive: always roman (0), auto substitution (.5), or always cursive (1) */
+  }
 h1,
 h2,
 pre {
@@ -55,4 +63,97 @@ a {
 }
 a:hover{
     color: coral;
+}
+.buttons, .output{
+    width: 50%;
+}
+.buttons button{
+    display: block;
+    margin-bottom: 1.5em;
+    width: 60%;
+}
+.buttons button{
+    padding: 1em 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+    color: white;
+    text-shadow: 1px 1px black;
+    border: 1px solid lightslategrey;
+    border-radius: 10px;
+}
+.buttons button:nth-of-type(1){
+    background-color: sandybrown ;
+    box-shadow: 5px 5px burlywood;
+}
+.buttons button:nth-of-type(2){
+    background-color: tomato;
+    box-shadow: 5px 5px lightcoral;
+}
+.buttons button:nth-of-type(3){
+    background-color: skyblue;
+    box-shadow: 5px 5px lightcyan;
+}
+.buttons button:nth-of-type(4){
+    background-color: rgb(194, 106, 194);
+    box-shadow: 5px 5px thistle;
+}
+.buttons button:nth-of-type(5){
+    background-color: slateblue;
+    box-shadow: 5px 5px rgb(130, 193, 249);
+}
+.buttons button:nth-of-type(6){
+    background-color: rgb(72, 198, 154);
+    box-shadow: 5px 5px lightgreen;
+}
+.buttons button:nth-of-type(7){
+    background-color: gold;
+    box-shadow: 5px 5px lightgoldenrodyellow;
+}
+.buttons legend{
+    font-family: Recursive, sans-serif;
+    font-variation-settings: var(--casl);
+    font-variation-settings: var(--wght);
+    font-size: large;
+    color: maroon;
+
+}
+.output p{
+    font-family: Recursive, sans-serif;
+    font-variation-settings: var(--mono);
+    font-size: large;
+    font-weight: bold;
+}
+.wrapWindow{
+    margin-left: 4em;
+    display: flex;
+}
+#square {
+    margin: 100px;
+    width: 100px;
+    height: 100px;
+    background: #d16;
+}
+#square2 {
+    margin: 100px;
+    width: 100px;
+    height: 100px;
+    background:cadetblue;
+}
+.summary{
+    margin-left: 2em;
+    text-overflow: ellipsis;
+    text-align: justify;
+    white-space: wrap;
+    max-width: 90%;
+}
+.summary li{
+    font-family: Recursive, sans-serif;
+    font-size: 1.3em;
+    font-variation-settings: var(--casl );
+    margin-bottom: .3em;
+}
+.mono{
+    font-size: 0.7em;
+    font-variation-settings: var(--mono), var(--slnt);
+    color:chocolate;
 }

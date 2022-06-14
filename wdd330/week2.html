@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wdd.css">
+    <link rel="shortcut icon" href="/images/suitcase.png" type="image/x-icon">
+    <title>Week 2 Notes</title>
+</head>
+
+<body>
+    <h1>Chapter 9: The Window Object</h1>
+    <div class="wrapWindow">
+        <section class="buttons">
+            <legend>window.location.href</legend>
+            <button onclick="gotoGoogle()">go to google</button>
+            <legend>window.location.toString() & window.navigator.userAgent</legend>
+            <button onclick="getUseragent()">get userAgent info</button>
+            <legend>window.open('URL', 'title', 'dimensions, resizable=yes')</legend>
+            <button onclick="newWin()">create new window</button>
+            <legend>document.cookie</legend>
+            <button onclick="setcookie()">show stored cookies</button>
+            <legend>window.setTimeout(execution, timeout in ms)</legend>
+            <button onclick="alertTimer()">show alert in 3 seconds</button>
+            <legend>'element'.style.transform</legend>
+            <button onclick="animateSquare()">animate the <span style="color:#d16">Red</span> square</button>
+            <legend>window.requestAnimationFrame()</legend>
+            <button onclick="animateSquare2()">animate the <span style="color: cadetblue">Green</span> square</button>
+        </section>
+        <section class="output">
+            <h2>Output</h2>
+            <p id="output"></p>
+            <p id="outputCookies"></p>
+            <div id='square'></div>
+            <div id='square2'></div>
+        </section>
+    </div>
+    <section class="summary">
+        <h2>Chapter Summary</h2>
+        <ul>
+            <li>
+                The <span class="mono">window</span> object is the global object in a browser.
+                Global variables are actually properties of the window object in a
+                browser environment.
+            </li>
+            <li>
+                <span class="mono"> alert, confirm(),</span> and <span class="mono">prompt()</span> are all methods of the window object,
+                and open dialogs that halt the execution of the program.
+            </li>
+
+            <li>
+                The <span class="mono">window.navigator</span> object gives information about the user’s
+                browser and operating system, although it can be unreliable.
+            </li>
+
+            <li>
+                The <span class="mono">window.location</span> object provides information about the URL of the
+                current page.
+            </li>
+
+            <li>
+                The <span class="mono">window.history</span> object keeps information about the pages that have
+                been visited in the session.
+            </li>
+
+            <li>
+                You can open, close, resize, and move windows (although, this doesn’t
+                mean you should!).
+            </li>
+
+            <li>
+                The <span class="mono">window.screen</span> object provides information about the user’s screen.
+            </li>
+
+            <li>
+                <span class="mono">document.write()</span> is an archaic method of writing text to the document
+                and should be avoided.
+            </li>
+
+            <li>
+                Cookies can be used to store small pieces of information between
+                requests using the <span class="mono">document.cookie</span> property.
+            </li>
+
+            <li>
+                The <span class="mono">window.setTimeout()</span> method can be used to invoke a function
+                after a set amount of time. It can be canceled using the <span class="mono">clearTimeout()</span>
+                method.
+            </li>
+
+            <li>
+                The <span class="mono">window.setInterval()</span> method can be used to repeatedly invoke a
+                function. It can be stopped using the <span class="mono">clearInterval()</span> method.
+            </li>
+
+            <li>
+                The <span class="mono">window.requestAnimationFrame()</span> method can be used to produce
+                smooth and optimized animation by utilizing the browser's built-in
+                graphics capabilities. It can be canceled using the
+                <span class="mono">cancelAnimationFrame()</span> method.
+            </li>
+
+        </ul>
+    </section>
+    <script>
+        function gotoGoogle() {
+            window.location.href = 'https://www.google.com'
+        }
+
+        function getUseragent() {
+            let location = window.location.toString();
+            let useragent = window.navigator.userAgent;
+            // window.alert("The UserAgent is: " + x)
+            let history = window.history.length;
+            let screenH = window.screen.height;
+            let screenW = window.screen.width;
+            let availScreenW = window.screen.availWidth;
+            let availScreenH = window.screen.availHeight;
+            document.getElementById('output').innerHTML =
+                "<span style='color:tomato; font-size:large'>Current URL: </span>" + location +
+                "</br><span style='color:tomato;font-size:large'>Useragent: </span>" +
+                useragent;
+        }
+
+        function newWin() {
+            const popup = window.open('https://google.com', 'gooloogooloo', 'width=800,height=400,resizable=yes');
+        }
+
+        function setcookie() {
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+                "October", "November", "December"
+            ];
+            document.cookie = 'name=Superman';
+            document.cookie = new Date();
+            document.getElementById('outputCookies').innerHTML =
+                "<span style='color:rgb(194, 106, 194)'>Cookies: </span>" + document.cookie;
+        }
+
+        function alertTimer() {
+            window.setTimeout(() => alert("3 seconds passed. Here I am ! ;)"), 3000);
+        }
+
+        function animateSquare() {
+            const squareElement = document.getElementById('square');
+            let angle = 0;
+            setInterval(() => {
+                angle = (angle + 2) % 360;
+                squareElement.style.transform = `rotate(${angle}deg)`
+            }, 1000 / 60);
+        }
+
+        function animateSquare2() {
+            const squareElement = document.getElementById('square2');
+            let angle = 0;
+
+            function rotate() {
+                angle = (angle + 2) % 360;
+                squareElement.style.transform = `rotate(${angle}deg)`
+                window.requestAnimationFrame(rotate);
+            }
+            const id = requestAnimationFrame(rotate);
+        }
+    </script>
+    <a href="../index.html">↩ Back to Main</a>
+</body>
+
+</html>
