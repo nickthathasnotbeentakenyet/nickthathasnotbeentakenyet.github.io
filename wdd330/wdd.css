@@ -64,6 +64,10 @@ a {
 a:hover{
     color: coral;
 }
+.deblinks{
+    font-size: medium;
+    border: none;
+}
 .buttons, .output{
     width: 50%;
 }
@@ -155,6 +159,13 @@ a:hover{
     font-size: 1.3em;
     font-variation-settings: var(--casl );
     margin-bottom: .3em;
+}
+.summary pre{
+    background-color: rgb(194, 221, 230);
+    color: brown;
+    padding: .5em 1em;
+    border-radius: 10px;
+    width: fit-content;
 }
 .mono{
     font-size: 0.7em;

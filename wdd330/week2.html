@@ -104,6 +104,102 @@
 
         </ul>
     </section>
+    <h1 id="chapter10">Chapter 10: Testing & Debugging</h1>
+    <section class="summary">
+        <ul>
+            <h2>Testing</h2>
+            <li>ES5 strict mode: <span class="mono">'use strict'</span> as the 1st line in .js file. Example:</li>
+            <pre>
+'use strict';
+e = 2.718;
+<< ReferenceError: e is not defined</pre>
+            <pre>
+(function() {
+    'use strict';
+    // All your code would go inside this function
+    }());</pre>
+            <li>ES6 introduced JavaScript modules. The <span class="mono">'use strict'</span> declaration is not required.</li>
+            <li>Linting tools can be used to ensure code follows good practice and conventions</li>
+            <li>Feature detection.</li>
+            <pre>
+if (window.holoDeck) {
+virtualReality.activate();
+}</pre>
+            <h2>Debugging</h2>
+                <li>Because <span class="mono">alert()</span> stops a program from
+                    running until 'OK' is clicked, it allows us to effectively put breakpoints in the code 
+                </li>
+                <pre>
+function amIOldEnough(age){
+    if (age < 12) {
+    alert(age);
+    return 'No, sorry.';
+    } else if (age < 18) {
+    return 'Only if you are accompanied by an adult.';
+    }
+    else {
+    return 'Yep, come on in!';
+    }
+    }</pre>
+                <li>The <span class="mono">console.log()</span> & <span class="mono">console.trace()</span> methods</li>
+                <li>Browser debugging tools [links to external sources]:
+                    <ul>
+                        <li><a class="deblinks" href="https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html">Firefox</a></li>
+                        <li><a class="deblinks" href="https://developer.chrome.com/docs/devtools/">Chrome</a></li>
+                    </ul>
+                </li>
+                <li>Using the <span class="mono">debugger</span> command</li>
+                <pre>
+function amIOldEnough(age){
+    debugger;
+    if (age < 12) {
+    debugger;
+    return 'No, sorry.';
+    } else if (age < 18) {
+    debugger;
+    return 'Only if you are accompanied by an adult.';
+    } else {
+    debugger;
+    return 'Yep, come on in!';
+    }
+    }
+    amIOldEnough(16);</pre>
+                <h2>Error Object</h2>
+                <li>Types of errors</li>
+                <ul>
+                    <li><span class="mono">RangeError</span>: a number is outside an allowable range</li>
+                    <li><span class="mono">ReferenceError</span>: a reference is made to an item that doesn’t exist</li>
+                    <li><span class="mono">SyntaxError</span>: error in the code’s syntax</li>
+                    <li><span class="mono">TypeError</span>: for example, a string is used when a number is expected</li>
+                    <li><span class="mono">URIError</span>: problem with encoding or decoding the URI</li>
+                    <li><span class="mono">InternalError</span>: JavaScript engine error</li>
+                    <li>Custom error:</li>
+                    <pre>
+const error = new TypeError('You need to use numbers in this function')</pre>
+                </ul>
+                <li>Throw an error:</li>
+                <pre>
+function squareRoot(number) {
+    'use strict';
+    if (number < 0) {
+    throw new RangeError('You can't find the square root of negative number}
+    return Math.sqrt(number);
+    };</pre>
+                <li>Any code placed inside a <span class="mono">try</span> block will pass any error objects to a
+                    <span class="mono">catch</span> block when an exception occurs. Any code inside a <span class="mono">finally</span>
+                    block will run if an exception does or does not occur.
+                    </li>
+                <h2>Test-driven development(TDD)</h2>
+                <ol>
+                    <li>Write tests (that initially fail)</li>
+                    <li>Write code to pass the tests</li>
+                    <li>Refactor the code</li>
+                    <li>Test refactored code</li>
+                    <li>Write more tests for new features</li>
+                </ol>
+                <li>Jest Framework</li>
+        </ul>
+    </section>
     <script>
         function gotoGoogle() {
             window.location.href = 'https://www.google.com'
