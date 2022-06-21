@@ -64,7 +64,7 @@ a {
 a:hover{
     color: coral;
 }
-.deblinks{
+.deblinks, .reglink{
     font-size: medium;
     border: none;
 }
@@ -171,4 +171,26 @@ a:hover{
     font-size: 0.7em;
     font-variation-settings: var(--mono), var(--slnt);
     color:chocolate;
+}
+.exform input{
+    font-size: x-large;
+    padding: .2em .5em;
+    border-left: chocolate 10px solid;
+}
+.exbutton{
+    font-size: x-large;
+    background-color:chocolate;
+    color: white;
+    border: none;
+    padding: .2em .5em;
+    box-shadow: lightsalmon 3px 3px 10px;
+}
+.exbutton:hover{
+    box-shadow: #d16 3px 3px 10px;
+}
+.factOut{
+    padding-top: .5em;
+    font-variation-settings: var(--casl);
+    font-size: 1.5em;
+    color: chocolate;
 }

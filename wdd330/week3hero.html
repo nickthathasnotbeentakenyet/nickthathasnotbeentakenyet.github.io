@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandbox</title>
+</head>
+<body>
+    <form id='hero' name="heroform">
+        <label for='heroName'>Name:</label>
+        <input type='text' id='heroName' name='heroName' autofocus placeholder>    
+        <button type='submit'>Submit</button>
+        
+    </form>
+    <script>
+    const form = document.forms['hero'];
+    form.addEventListener('submit', makeHero, false);
+    function makeHero(event) {
+    event.preventDefault(); // prevent the form from being submitted
+    const hero = {}; // create an empty object
+    hero.name = form.heroName.value; // create a name property based on the input
+    alert(JSON.stringify(hero)); // convert object to JSON string and display ireturn hero;
+    }
+    </script>
+</body>
+</html>

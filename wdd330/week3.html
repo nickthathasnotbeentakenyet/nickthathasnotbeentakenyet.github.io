@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wdd.css">
+    <link rel="shortcut icon" href="/images/suitcase.png" type="image/x-icon">
+    <title>Week 3 Notes</title>
+</head>
+
+<body>
+    <section class="summary">
+        <h1>Chapter 13: Ajax</h1>
+        <ul>
+        <li>Asynchronous JavaScript and XML</li>
+        <li>Ajax allows JavaScript to request
+            resources from a server on behalf of the client. The resources requested are
+            usually JSON data or small fragments of text or HTML rather than a whole
+            web page</li>
+        <li>The same-origin policy in browsers blocks all requests from a domain that is
+            different from the page making the request to stop any malicious JavaScript.
+            Cross-origin resource sharing (CORS) is a solution to this problem as it
+            allows resources to be requested from another website outside the original</li>
+        <li>An application programming interface (API) is a collection of methods that
+            allows external access to another program or service. Many websites allow
+            controlled access to their data via public APIs.
+            A weather site, for example, might have an API that provides methods that
+            return information about the weather in a given location, such as temperature,
+            wind speed, and so on. This can then be used to display local weather data on
+            a web page. </li>
+        <h2>Fetch API</h2>
+        <li>The Fetch API provides a global <span class="mono">fetch()</span> method that only has one
+            mandatory argument, which is the URL of the resource you wish to fetch</li>
+        <pre>
+    const url = 'https:example.com/data';
+    fetch(url)
+    .then((response) => {
+    if(response.ok) {
+    return response;
+    }
+    throw Error(response.statusText);
+    })
+    .then( response => // do something with response )
+    .catch( error => console.log('There was an error!') )
+    </pre>
+        <li><span class="mono">if block</span> is used to check if the request was successful</li>
+        <li>Text Response:</li>
+        <pre>fetch(url)
+    .then( response => response.text() ); // transforms the text stream into a .then( text => console.log(text) )</pre>
+        <li>File Response:</li>
+    <pre>
+    fetch(url)
+    .then( response => response.blob() ); // transforms the data into a blob object
+    .then( blob => console.log(blob.type) )
+    .catch( error => console.log('There was an error: ', error))
+    </pre>
+    <li>JSON Response:</li>
+    <pre>
+    fetch(url)
+    .then( response => response.json() ); // transforms the JSON data 
+    .then( data => console.log(Object.entries(data)) )
+    .catch( error => console.log('There was an error: ', error))</pre>
+    <li>HTTP methods/requests:
+        <ul>
+        <li>GET requests to retrieve resources</li>
+        <li>POST requests, usually used to create a resource but can actually
+        perform any task</li>
+        <li>PUT requests to upsert, which means insert a resource or update it
+        entirely</li>
+        <li>PATCH requests to make partial updates to a resource</li>
+        <li>DELETE requests to delete a resources</li>
+    </ul>
+    </li>
+    <li>All together:</li>
+    <pre>
+    const url = 'https:example.com/data';
+    const headers = new Headers({ 'Content-Type': 'text/plain', 'Accept-Charsetconst request = (url,{
+    headers: headers
+    })
+    fetch(request)
+    .then( function(response) {
+    if(response.ok) {
+    return response;
+    }
+    throw Error(response.statusText);
+    })
+    .then( response => // do something with response )
+    .catch( error => console.log('There was an error!') )
+    </pre>
+    <h2>Receiving Example</h2>
+    <button id='number' class="exbutton">Number Fact</button>
+    <button id='chuck' class="exbutton">Chuck Norris Fact</button>
+    <div id='output' class="factOut">
+    Ajax response will appear here
+    </div>
+    <h2>Sending Example</h2>
+    <form id='todo' action='https://jsonplaceholder.typicode.com/todos' method='post' class="exform">
+    <input type='text' name='task' placeholder='Add Task' required>
+    <button type='submit' onclick="show()" class="exbutton">Add Task</button>
+    <p id="cons" class="factOut"></li>
+    </form>
+    <h2>FormData</h2>
+    <li>The Fetch API includes the FormData interface, which makes it much easier
+        to submit information in forms using Ajax</li>
+        <form id='todo2' target="_blank" action='https://jsonplaceholder.typicode.com/todos' method='post' class="exform">
+        <input type='text' name='task2' placeholder='Add Task' required>
+        <button type='submit2' class="exbutton">Add Task</button>
+    <li>Using jQuery</li>
+    <pre>
+    $.ajax('http://numbersapi.com/random')
+    .done(text => outputDiv.innerHTML = text );
+    </pre>
+</ul>
+    <section class="summary">
+        <h2>Chapter Summary</h2>
+        <ul>
+    <li><span class="mono"> Ajax</span> is a technique for sending and receiving data asynchronously in the
+        background.
+        The data can be sent in many forms, but it is usually in JSON.
+        <span class="mono">Ajax</span> can be used for making partial page updates without having to do a
+        full page reload.
+        <span class="mono">Ajax</span> can be used for communicating with external APIs.
+        <span class="mono">Ajax</span> requests can be made using the Fetch API.</li>
+    <li>The <span class="mono">Response</span> interface allows you to control the response received from
+        a request or to create your own response objects.</li>
+    <li>The <span class="mono">Request</span> interface allows you to create a request object that contains
+        information about the request being made, such as the URL and headers.</li>
+    <li>The <span class="mono">Headers</span> interface allows you to create HTTP headers that can be
+        added to a request or response object.</li>
+    <li>Requests can retrieve data using a <span class="mono">GET</span> request, or send data using a
+        <span class="mono">POST</span> request.</li>
+    <li>The <span class="mono">FormData</span> interface makes it easier to send data from forms.</li>
+        </ul>
+    </section>
+    </section>
+    <section id="chptr8" class="summary">
+        <h1>Chapter 8: Forms</h1>
+        <li>Accessing Form Elements</li>
+        <ul>
+            <li>by index</li>
+            <pre>
+const form = document.forms[0];</pre>
+            <li>by name
+                <pre>
+const form = document.forms['search'];</pre>
+            </li>
+        </ul>
+        <li>The <span class="mono">form.submit()</span> method will submit the form automatically</li>
+        <li>The <span class="mono">form.reset()</span> method will reset all the form controls back to their initial
+            values specified in the HTML. Same can be done using:</li>
+        <pre>
+&lt;button type='reset'&gt;Reset&lt;/button&gt;</pre>
+            <a class="reglink" target="_blank" href="./week3hero.html">Open the Hero page</a>
+            <li>Disabling the Submit Button</li>
+            <pre>
+&lt;button type='submit' id='submit' disabled&gt;Submit&lt;/button&gt;
+
+function disableSubmit(event) {
+    if(event.target.value === ''){
+    document.getElementById('submit').disabled = true;
+    } else {
+    document.getElementById('submit').disabled = false;
+    }
+}</pre>
+    <section class="summary">
+        <h2>Chapter Summary</h2>
+        <ul>
+<li>Forms are the primary method used for entering data into a browser.
+    Forms have a variety of controls that are used for entering different
+    types of information.</li>
+<li><span class="mono">document.forms</span> will return an HTML collection of all the forms on a
+    page.
+    <span class="mono">form.elements</span> will return an HTML collection of all the elements
+    contained within a form.</li>
+<li>Forms have <span class="mono">focus, blur, </span>and <span class="mono"> change</span> events that fire as a user interacts
+    with the form.</li>
+<li>Forms also have a <span class="mono">submit</span> event that can be used to intercept a form
+    before it’s been submitted.</li>
+<li>The information entered into a form can be read or updated using the
+    <span class="mono">value</span> property of the form controls.</li>
+        </ul>
+    </section>
+    <br>
+    <br>
+    </section>
+    <script>
+    const textButton = document.getElementById('number');
+    const apiButton = document.getElementById('chuck');
+    const outputDiv = document.getElementById('output');
+    const textURL = 'http://numbersapi.com/random';
+    const apiURL = 'https://api.chucknorris.io/jokes/random';
+
+    // number fact
+    textButton.addEventListener('click', () => {
+    fetch(textURL)
+    .then( response => {
+    outputDiv.innerHTML = 'Waiting for response...';
+    if(response.ok) {
+    return response;
+    }
+    throw Error(response.statusText);
+    })
+    .then( response => response.text() )
+    .then( text => outputDiv.innerText = text )
+    .catch( error => console.log('There was an error:', error))
+    },false);
+
+    // Chuck Norris fact
+    apiButton.addEventListener('click', () => {
+    fetch(apiURL)
+    .then( response => {
+    outputDiv.innerHTML = 'Waiting for response...';
+    if(response.ok) {
+    return response;
+    }
+    throw Error(response.statusText);
+    })
+    .then( response => response.json() )
+    .then( data => outputDiv.innerText = data.value )
+    .catch( error => console.log('There was an error:', error))
+    },false);
+
+    // To Do
+
+    const form = document.forms['todo'];
+    form.addEventListener('submit', addTask, false);
+    function addTask(event) {
+    event.preventDefault();
+    const number = form.task.value;
+    const task = {
+    userId: 1,
+    title: form.task.value,
+    completed: false
+    }
+    const data = JSON.stringify(task);
+    const url = 'https://jsonplaceholder.typicode.com/todos';
+    const headers = new Headers({
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+    });
+    const request = new Request(url,
+    {
+    method: 'POST',
+    header: headers,
+    body: data
+    }
+    )
+    fetch(request)
+    .then( response => response.json() )
+    .then( task => console.log(`Task saved with an id of ${task.id}`) )
+    .catch( error => console.log('There was an error:', error))
+    }
+    // Display POSTed response
+    function show(){
+        document.getElementById("cons").innerHTML = 'open console to see "Task saved with an id of 1"'
+    }
+
+    // FormData 
+
+    const form2 = document.forms['todo2'];
+    form2.addEventListener('submit2', addTask, false);
+    function addTask(event) {
+    event.preventDefault();
+    const task2 = new FormData(form2);
+    const url = `http://echo.jsontest.com/id/1/title/${form2.task2.value}`;
+    const headers = new Headers({
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+    });
+    const request = new Request(url,
+    {
+    method: 'POST',
+    mode: 'cors',
+    header: headers,
+    body: JSON.stringify(task2)
+    }
+    )
+    fetch(request)
+    .then( response => response.json() )
+    .then( data => console.log(`${data.title} saved with an id of ${data.id}`)) 
+    .catch( error => console.log('There was an error:', error))
+    }
+
+    </script>
+    <a href="../index.html">↩ Back to Main</a>
+</body>
+
+</html>
