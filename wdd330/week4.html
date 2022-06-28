@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wdd.css">
+    <title>Week 4 Notes</title>
+</head>
+
+<body>
+    <section class="summary">
+        <h1>Ch11: Further Functions</h1>
+        <ul>
+            <li>
+                <span class="mono">length</span> property that returns the number of parameters the function has
+            </li>
+            <pre>
+function square(x) {
+    return x*x;
+    }
+square.length
+<< 1</pre>
+            <li>the <span class="mono">call()</span> method</li>
+            <pre>
+function sayHello(){
+    return `Hello, my name is ${ <span class="mono">this</span>.name }`;
+    }
+const clark = { name: 'Clark' };
+sayHello.<span class="mono">call</span>(clark);
+<< 'Hello, my name is Clark'</pre>
+            <li>
+                Immediately Invoked Function Expression
+                <pre>
+(function(){
+    const temp = 'World';
+    console.log(`Hello ${temp}`);
+    })();
+    << 'Hello World'</pre>
+            </li>        
+            <li>
+                Self-contained Code Blocks
+                <pre>
+(function() {
+    // block A
+    const name = 'Block A';
+    console.log(`Hello from ${name}`);
+    }());
+(function() {
+    // block B
+    const name = 'Block B';
+    console.log(`Hello from ${name}`);
+    }());
+<<  Hello from Block A
+    Hello from Block B</pre>
+            </li>
+            <li>Recursive Functions</li>
+            <pre>
+function factorial(n) {
+    if (n === 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}</pre>
+    <li>Promises can be used to deal with multiple
+        asynchronous actions in sequence. They also provide a nicer mechanism
+        for handling errors.
+        </li>
+    <pre>
+const promise = new Promise( (resolve, reject) => {
+// initialization code goes here
+if (success) {
+    resolve(value);
+} else {
+    reject(error);
+}
+});</pre>
+<li>Pure Functions
+    <ul>
+        <li>Rules
+            <ul>
+                <li> The return value of a pure function should only depend on the values
+                    provided as arguments</li>
+                <li>There are no side-effects. A pure function doesn't change any values or
+                    data elsewhere in the program.</li>
+                <li>Referential transparency. Given the same arguments, a pure function will
+                    always return the same result.</li>
+            </ul>
+        </li>
+        <li>At least one argument</li>
+        <li>A return value</li>
+
+    </ul>
+</li>
+
+</ul>
+
+
+        <h1>Ch8: Transforms and Transitions | HTML5 & CSS3 For the Real World</h1>
+        <hint><span style="color:rgb(230, 79, 79) ;">&#9888;</span> Refer to the book</hint>
+
+    </section>
+    <section class="summary" id="week4-2">
+        <h1>JSON Web Tokens (JWT)</h1>
+        <ul>
+            <li>JSON Web Token (JWT) is an open standard (RFC 7519) that defines a <em>compact</em> and
+                <em>self-contained</em> way for securely transmitting information between parties as a <em>JSON
+                    object</em>.
+                This information can be verified and <em>trusted</em> because it is digitally signed.
+                JWTs can be signed using a secret (with HMAC algorithm) or a public/private key pair using RSA.</li>
+            <li>
+                JWTs consist of three parts separated by dots (.), which are:
+                <ul>
+                    <li>Header</li>
+                    <li>Payload</li>
+                    <li>Signature</li>
+                </ul>
+            </li>
+            <pre>
+<span style="color: rgba(255, 74, 74, 0.91) ;">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</span>.<span style="color: rgb(244, 98, 244);">eyJzdWIiOiIxMjM
+0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM
+5MDIyfQ</span>.<span style="color: rgb(16, 191, 250);">SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</span>
+                </pre>
+            <div style="width:50% ;">
+                <img class="txtimg" src="https://auth0.com/learn/wp-content/uploads/2016/01/17.png" alt="JWT workflow">
+            </div>
+            <li><a class="reglink" target="_blank" href="https://jwt.io/">JSON Web Tokens | Home page</a></li>
+        </ul>
+    </section>
+    <a href="../index.html">↩ Back to Main</a>
+</body>
+
+</html>

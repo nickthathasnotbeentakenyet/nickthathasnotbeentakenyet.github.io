@@ -156,11 +156,12 @@ a:hover{
 }
 .summary li{
     font-family: Recursive, sans-serif;
-    font-size: 1.3em;
+    font-size: 1.3rem;
     font-variation-settings: var(--casl );
     margin-bottom: .3em;
 }
 .summary pre{
+    font-size: .9rem;
     background-color: rgb(194, 221, 230);
     color: brown;
     padding: .5em 1em;
@@ -193,4 +194,21 @@ a:hover{
     font-variation-settings: var(--casl);
     font-size: 1.5em;
     color: chocolate;
+}
+.txtimg{
+    width:100%; 
+    height:auto;
+    border: teal 2px solid;
+    box-shadow: lightseagreen 3px 3px 15px ;
+}
+em{
+    color: brown;
+}
+hint{
+    background: rgb(235, 235, 130);
+    font-size: 1.2rem;
+    padding: .5em 1em;
+    font-family: Recursive, sans-serif;
+    font-variation-settings: var(--slnt);
+    color: teal;
 }
