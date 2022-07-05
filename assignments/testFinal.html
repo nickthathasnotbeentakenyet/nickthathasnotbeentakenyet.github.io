@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project Test API</title>
+</head>
+<body>
+    <section class="stats">
+        <h3 id="statsheading">Weather Stats</h3>
+        <p><em class="left">Currently :</em> <span id="current" class="wstats">Cloudy</span></p>
+        <p><em class="left">High :</em> <span id="temperature" class="wstats"></span></p>
+        <p><em class="left">Wind Speed :</em> <span id="windspeed" class="wstats"></span></p>
+        <p><em class="left">WindChill : </em><span id="windchill" class="wstats"></span></p>
+        <p><em class="left">Humidity : </em><span id="humid" class="wstats"></span></p>
+    </section>
+    <section class="forecast5">
+        <h2>5 Day Forecast</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th id="dayforecast1"></th>
+                    <th id="dayforecast2"></th>
+                    <th id="dayforecast3"></th>
+                    <th id="dayforecast4"></th>
+                    <th id="dayforecast5"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="#" alt="" id="forecasticon1">
+                        <p id="forecasttemp1"></p>
+                    </td>
+                    <td><img src="#" alt="" id="forecasticon2">
+                        <p id="forecasttemp2"></p>
+                    </td>
+                    <td><img src="#" alt="" id="forecasticon3">
+                        <p id="forecasttemp3"></p>
+                    </td>
+                    <td><img src="#" alt="" id="forecasticon4">
+                        <p id="forecasttemp4"></p>
+                    </td>
+                    <td><img src="#" alt="" id="forecasticon5">
+                        <p id="forecasttemp5"></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+    // ------- Current DATE 
+    let weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=93022b80d2fa47743474256c2ea49a47";
+    let weatherRequest = new XMLHttpRequest();
+    weatherRequest.open('GET', weatherURL, true);
+    weatherRequest.send();
+
+    weatherRequest.onload =  function () {
+    let weatherData = JSON.parse(weatherRequest.responseText);
+    console.log(weatherData);
+    document.getElementById('temperature').innerHTML = weatherData.main.temp + ' &#8457;';
+    document.getElementById('current').innerHTML = weatherData.weather[0].description;
+    document.getElementById('windspeed').innerHTML = weatherData.wind.speed + ' mph';
+    document.getElementById('humid').innerHTML = weatherData.main.humidity + ' &percnt;';
+    }
+    // -------- 5 day FORECAST
+    
+    const forecastURL = "https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=93022b80d2fa47743474256c2ea49a47"
+    const forecast = new XMLHttpRequest();
+    forecast.open('GET', forecastURL, true);
+    forecast.send();
+
+    forecast.onload = function () {
+        const forecastData = JSON.parse(forecast.responseText);
+        console.log(forecastData);
+
+        let weekday = new Array(7);
+        weekday[0] = "Monday";
+        weekday[1] = "Tuesday";
+        weekday[2] = "Wednesday";
+        weekday[3] = "Thursday";
+        weekday[4] = "Friday";
+        weekday[5] = "Saturday";
+        weekday[6] = "Sunday";
+        let count = 1;
+        for (let i = 0; i < forecastData.list.length; i++) {
+            if (forecastData.list[i].dt_txt.includes("18:00:00")) {
+                document.getElementById('forecasttemp'+count).innerHTML=forecastData.list[i].main.temp + ' &#8457;';
+                document.getElementById('forecasticon' + count).setAttribute('src', "https://openweathermap.org/img/w/" + forecastData.list[i].weather[0].icon + ".png");
+                document.getElementById('forecasticon' + count).setAttribute('alt', forecastData.list[i].weather[0].description);
+                document.getElementById('dayforecast' + count).innerHTML = weekday[(new Date().getDay() + count - 1) % 7];
+                count++;
+            }
+            if (count == 6) {
+                break;
+            }
+        }
+    }
+    </script>
+</body>
+</html>

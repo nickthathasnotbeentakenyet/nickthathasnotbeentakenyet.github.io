@@ -212,3 +212,55 @@ hint{
     font-variation-settings: var(--slnt);
     color: teal;
 }
+#rainbow{
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    border-radius: 5px;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+#backtowhite{
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+    border-radius: 5px;
+}
+#factorizesub{
+    background: linear-gradient(to right, #ff3399, #6666ff);
+    border-radius: 5px;
+}
+.factOut2{
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: x-large;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+}
+#div1 {
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 1em;
+    border: 2px solid #ff3399;
+    box-shadow: #ff3399 1px 1px 10px;
+  }
+#div21, #div22 {
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 1em;
+    border: 2px solid #6666ff;
+    box-shadow: #0099ff 1px 1px 10px;
+  }
