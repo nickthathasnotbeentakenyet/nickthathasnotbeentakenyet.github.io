@@ -36,6 +36,7 @@
 
         .cont {
             display: flex;
+            /* background-color: #333; */
         }
 
         .ancors {
@@ -47,7 +48,7 @@
         .ancors ul {
             margin-top: 2em;
             list-style: none;
-            margin-left: 3em;
+            margin-left: 5em;
             text-align: left;
         }
 
@@ -57,22 +58,27 @@
         }
 
         h1 {
-            margin-left: 1em;
+            margin-left: 2em;
             text-align: left;
             color: teal;
+            text-shadow: 2px 1px 10px rgb(136, 29, 136);
         }
 
         h2 {
-            margin-left: 1em;
+            margin-left: 2em;
             text-align: left;
-            color: darkgoldenrod;
+            color: rgb(136, 29, 136);
             border-bottom: none;
         }
 
         canvas {
             display: block;
         }
-
+        .decorator{
+            min-width: 10px;
+            margin: 0 10px;
+            background: linear-gradient(to bottom, rgb(136, 29, 136), rgb(222, 130, 222), rgb(190, 7, 245),rgb(68, 28, 199));
+        }
         .theme {
             background: linear-gradient(to right, rgb(22, 188, 188), #00ffa2ea, rgb(127, 122, 122), teal);
             -webkit-background-clip: text;
@@ -82,7 +88,11 @@
             animation: rainbow_animation 6s ease-in-out infinite;
             background-size: 400% 100%;
         }
+        .theme:hover{
+            color: rgb(136, 29, 136);;
+        }
         .git{
+            margin-left: 1.5em;
             font-size: small;
             position:absolute;
             bottom: 2em;
@@ -121,6 +131,8 @@
 
 <body>
     <div class="cont">
+        <div class="decorator">
+        </div>
         <div class="ancors">
             <h1>WDD 330 Portfolio</h1>
             <h2>Arkadii Lantukh</h2>
@@ -137,6 +149,7 @@
                 <li><a class="git theme" target="_blank" href="https://github.com/nickthathasnotbeentakenyet?tab=repositories">GitHub</a></li>
             </ul>
         </div>
+        <div class="decorator"></div>
         <div>
             <canvas id="canva"></canvas>
         </div>
