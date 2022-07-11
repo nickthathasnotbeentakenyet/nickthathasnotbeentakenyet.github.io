@@ -1,0 +1,177 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description"
+        content="Assignment portal page for Arkadii Lantukh, Student in CIT 230: Web Front-end Development at Brigham Young University-Idaho">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="images/suitcase.png" type="image/x-icon">
+    <title>Portfolio | Arkadii Lantukh</title>
+    <style>
+        @import url(//db.onlinewebfonts.com/c/241fc7db74a38d27a10b44b4505ac9ad?family=Xirod);
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, #fff 0%, #aaa 100%) no-repeat;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        body {
+            text-align: center;
+            display: table;
+            background: black;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .cont {
+            display: flex;
+        }
+
+        .ancors {
+            min-width: 15%;
+            padding-top: 5em;
+            background-color: #333;
+        }
+
+        .ancors ul {
+            margin-top: 2em;
+            list-style: none;
+            margin-left: 3em;
+            text-align: left;
+        }
+
+        hr {
+            width: 80%;
+            margin: 1em 10%;
+        }
+
+        h1 {
+            margin-left: 1em;
+            text-align: left;
+            color: teal;
+        }
+
+        h2 {
+            margin-left: 1em;
+            text-align: left;
+            color: darkgoldenrod;
+            border-bottom: none;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        .theme {
+            background: linear-gradient(to right, rgb(22, 188, 188), #00ffa2ea, rgb(127, 122, 122), teal);
+            -webkit-background-clip: text;
+            font-family: 'Xirod',Impact, Haettenschweiler, 'Arial Narrow Bold', arial;
+            background-clip: text;
+            color: transparent;
+            animation: rainbow_animation 6s ease-in-out infinite;
+            background-size: 400% 100%;
+        }
+        .git{
+            font-size: small;
+            position:absolute;
+            bottom: 2em;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: .5em;
+            width: 70px;
+            height: 70px;
+            animation: radial-pulse 1.7s infinite;
+        }
+        @keyframes rainbow_animation {
+
+            0%,
+            100% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 100% 0;
+            }
+        }
+        
+        @keyframes radial-pulse {
+            0% {
+                box-shadow: 0 0 0 0 teal
+            }
+
+            100% {
+                box-shadow: 0 0 0 20px rgba(0, 0, 0, 0)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <div class="ancors">
+            <h1>WDD 330 Portfolio</h1>
+            <h2>Arkadii Lantukh</h2>
+            <hr>
+            <ul>
+                <li><a class="theme" href="./wdd330/week1.html">Week 1</a></li>
+                <li><a class="theme" href="./wdd330/week2.html">Week 2</a></li>
+                <li><a class="theme" href="./wdd330/week3.html">Week 3</a></li>
+                <li><a class="theme" href="./wdd330/week4.html">Week 4</a></li>
+                <li><a class="theme" href="./wdd330/week5.html">Week 5</a></li>
+
+            </ul>
+            <ul>
+                <li><a class="git theme" target="_blank" href="https://github.com/nickthathasnotbeentakenyet?tab=repositories">GitHub</a></li>
+            </ul>
+        </div>
+        <div>
+            <canvas id="canva"></canvas>
+        </div>
+    </div>
+    <script>
+        var canva = document.getElementById("canva");
+        var ctx = canva.getContext("2d");
+
+        canva.height = window.innerHeight;
+        canva.width = window.innerWidth;
+        var matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
+        matrix = matrix.split("");
+
+        var font_size = 10;
+        var columns = canva.width / font_size;
+        var drops = [];
+        for (var x = 0; x < columns; x++)
+            drops[x] = 1;
+
+        function draw() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+            ctx.fillRect(0, 0, canva.width, canva.height);
+
+            ctx.fillStyle = "#0F0"; //green text
+            ctx.font = font_size + "px arial";
+            for (var i = 0; i < drops.length; i++) {
+                var text = matrix[Math.floor(Math.random() * matrix.length)];
+                ctx.fillText(text, i * font_size, drops[i] * font_size);
+                if (drops[i] * font_size > canva.height && Math.random() > 0.975)
+                    drops[i] = 0;
+                drops[i]++;
+            }
+        }
+        setInterval(draw, 35);
+    </script>
+</body>
+
+</html>

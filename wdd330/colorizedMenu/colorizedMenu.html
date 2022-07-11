@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Цветное меню и селект</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./w3-theme-indigo.css" id="css" >
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <style>
+        /* необязательная радуга. Можно удалить весь стайл */
+        #theme{
+        background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: rainbow_animation 6s ease-in-out infinite;
+        background-size: 400% 100%;
+        border: white 2px solid;
+        }
+        @keyframes rainbow_animation {
+            0%,100% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 100% 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w3-container w3-theme-l1">
+        <div id="menu" class="w3-bar"></div>
+    </div>
+
+</body>
+
+<script>
+let menuOptions = [
+    {link: 'index.html', text: 'Examples'},
+    {link: 'orig-allCoins.html', text: 'Orig Bit Coins'},
+    {link: 'coins.html', text: 'Crypto'},
+    {link: 'allCoins.html', text: 'Crypto Currency'},
+    {link: 'books.html', text: 'Books'},
+    {link: 'news.html', text: 'News'},
+    {link: 'stars.html', text: 'Stars'},
+    {link: 'lambdaQuotes.html', text: 'Lambda'},
+    {link: 'weather.html', text: 'Weather'},
+    {link: 'art.html', text: 'World Art'},
+    {link: 'Volcanoes.html', text: 'Volcanoes'},
+    {link: 'disney.html', text: 'Disney'},
+    {link: 'churchStats.html', text: 'Stats'},
+    {link: 'translate.html', text: 'Translate'},
+];
+
+let menu = document.getElementById('menu');
+
+for ( {link, text} of menuOptions) {
+    menu.innerHTML += `
+        <a id="${text}" href="${link}" class="w3-bar-item w3-button tabs">${text}</a>`;
+}
+
+menu.innerHTML += `
+    <select id="theme" style="margin-top:.5em;border-radius:10px;padding-left:.5em; ">
+        <option style="background-color:#f6665c" value='red'>red</option>
+        <option style="background-color:#ed4d82" value='pink'>pink</option>
+        <option style="background-color:#be3dd4" value='purple'>purple</option>
+        <option style="background-color:#845bcb" value='deep-purple'>deep-purple</option>
+        <option style="background-color:#6271c8" value='indigo'>indigo</option>
+        <option style="background-color:#4daaf6" value='blue'>blue</option>
+        <option style="background-color:#a1d9ef" value='light-blue'>light-blue</option>
+        <option style="background-color:#12e3ff" value='cyan'>cyan</option>
+        <option style="background-color:#00dcc6" value='teal'>teal</option>
+        <option style="background-color:#6ec071" value='green'>green</option>
+        <option style="background-color:#a2cf6f" value='light-green'>light-green</option>
+        <option style="background-color:#d6e35f" value='lime'>lime</option>
+        <option style="background-color:#f3eba5" value='khaki'>khaki</option>
+        <option style="background-color:#ffef64" value='yellow'>yellow</option>
+        <option style="background-color:#ffcd37" value='amber'>amber</option>
+        <option style="background-color:#ffad33" value='orange'>orange</option>
+        <option style="background-color:#ff7850" value='deep-orange'>deep-orange</option>
+        <option style="background-color:#7d97a5" value='blue-grey'>blue-grey</option>
+        <option style="background-color:#a07261" value='brown'>brown</option>
+        <option style="background-color:#b1b1b1" value='grey'>grey</option>
+        <option style="background-color:#818181" value='dark-grey'>dark-grey</option>
+        <option style="background-color:#333333" value='black'>black</option>
+    </select>
+    `;
+
+let css = document.getElementById('css');
+
+let theme = document.getElementById('theme');
+
+let activeTab = document.title;
+
+let themeColor = localStorage.getItem(activeTab);
+if ( themeColor !== null)
+    css.href = `https://www.w3schools.com/lib/w3-theme-${themeColor}.css`
+
+let choice = css.href.split("w3-theme-")[1].split('.css')[0];
+
+theme.innerHTML = `<option value='${choice}'>${choice}</option>${theme.innerHTML}`;
+
+theme.addEventListener('change', () => {
+    css.href = `https://www.w3schools.com/lib/w3-theme-${theme.value}.css`
+    localStorage.setItem(activeTab, theme.value);
+} );
+
+</script>
+</html>
