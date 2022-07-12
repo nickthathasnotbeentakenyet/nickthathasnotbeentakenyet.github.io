@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description"
+        content="Final Project for team 5 | Weather site">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="./warn.png" type="image/x-icon">
+    <title>Final Project | Team 5</title>
+    <style>
+        body{
+            background-color: #333;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            position: relative;
+        }
+        .container{
+            /* margin: 6% auto;
+            width: 40%; */
+            box-shadow: 5px 3px 10px orange ;
+        }
+        .mainimg{
+            width: 100%;
+        }
+        .supimg{
+            height: 5%;
+            width: 100%;
+        }
+        .link{
+            /* margin: -2em auto 0; */
+            position: absolute;
+            margin: 2em auto 0;
+            left: 45%;
+        }
+
+        #d{
+            width: 30%;
+            position: absolute;
+            -webkit-animation: moveX 4s linear 0s infinite alternate, moveY 6.8s linear 0s infinite alternate;
+            -moz-animation: moveX 4s linear 0s infinite alternate, moveY 6.8s linear 0s infinite alternate;
+            -o-animation: moveX 4s linear 0s infinite alternate, moveY 6.8s linear 0s infinite alternate;
+            animation: moveX 4s linear 0s infinite alternate, moveY 6.8s linear 0s infinite alternate;
+            }
+
+            @-webkit-keyframes moveX {
+            from { left: 0; } to { left: 70%; }
+            }
+            @-moz-keyframes moveX {
+            from { left: 0; } to { left: 70%; }
+            }
+            @-o-keyframes moveX {
+            from { left: 0; } to { left: 70%; }
+            }
+            @keyframes moveX {
+            from { left: 0; } to { left: 70%; }
+            }
+
+            @-webkit-keyframes moveY {
+            from { top: 0; } to { top: 45%; }
+            }
+            @-moz-keyframes moveY {
+            from { top: 0; } to { top: 45%; }
+            }
+            @-o-keyframes moveY {
+            from { top: 0; } to { top: 45%; }
+            }
+            @keyframes moveY {
+            from { top: 0; } to { top: 45%; }
+                    }
+
+    </style>
+</head>
+<body>
+    <div id="d"  class="container">
+        <div>
+            <img class="supimg" src="./wl.png" alt="warning sign">
+        </div>
+        <div>
+            <img class="mainimg" src="./warn.png" alt="warning sign">
+        </div>
+        <div>
+            <img class="supimg" src="./wl.png" alt="warning sign">
+        </div>
+    </div>
+    <div class="link">
+        <a href="../gotowdd330.html">↩ Back to Main</a>
+    </div>
+</body>
+</html>
