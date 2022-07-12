@@ -6,12 +6,14 @@
     <meta name="description"
         content="Assignment portal page for Arkadii Lantukh, Student in CIT 230: Web Front-end Development at Brigham Young University-Idaho">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link href="https://allfont.net/allfont.css?fonts=xirod" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="images/suitcase.png" type="image/x-icon">
     <title>Portfolio | Arkadii Lantukh</title>
     <style>
-        @import url(//db.onlinewebfonts.com/c/241fc7db74a38d27a10b44b4505ac9ad?family=Xirod);
+        @font-face {
+        font-family: "xirod";
+        src: url("./wdd330/xirod.ttf");
+        }
         * {
             margin: 0;
             padding: 0;
@@ -83,14 +85,14 @@
         .theme {
             background: linear-gradient(to right, rgb(22, 188, 188), #00ffa2ea, rgb(127, 122, 122), teal);
             -webkit-background-clip: text;
-            font-family: 'Xirod',Impact, Haettenschweiler, 'Arial Narrow Bold', arial;
+            font-family: 'xirod',Impact,'Arial Narrow Bold', arial;
             background-clip: text;
             color: transparent;
             animation: rainbow_animation 6s ease-in-out infinite;
             background-size: 400% 100%;
         }
         .theme:hover{
-            color: rgb(136, 29, 136);;
+            color: rgb(136, 29, 136);
         }
         .git{
             margin-left: 1.5em;
@@ -105,6 +107,11 @@
             width: 70px;
             height: 70px;
             animation: radial-pulse 1.5s ease infinite;
+            transition: transform 2s;
+        }
+        .git:hover{
+            transform: rotate(180deg);
+            animation: radial-pulse2 1.5s ease infinite;
         }
         @keyframes rainbow_animation {
 
@@ -121,6 +128,15 @@
         @keyframes radial-pulse {
             0% {
                 box-shadow: 0 0 0 0 teal
+            }
+
+            100% {
+                box-shadow: 0 0 0 20px rgba(0, 0, 0, 0)
+            }
+        }
+        @keyframes radial-pulse2 {
+            0% {
+                box-shadow: 0 0 0 0 rgb(222, 130, 222)
             }
 
             100% {
